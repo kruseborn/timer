@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  Timer
+//  mernis timer
 //
-//  Created by Tobias Kruseborn on 27/02/15.
+//  Created by Tobias Kruseborn on 28/02/15.
 //  Copyright (c) 2015 mesa mingi. All rights reserved.
 //
 
@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var timerText: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,5 +22,10 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func play(sender: UIBarButtonItem) {
+        
+        self.timerText.text = "02:00:02"
+        
+    }
 }
 

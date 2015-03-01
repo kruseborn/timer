@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		169808731AA1CA3D00F7DF71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169808721AA1CA3D00F7DF71 /* AppDelegate.swift */; };
+		169808751AA1CA3D00F7DF71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169808741AA1CA3D00F7DF71 /* ViewController.swift */; };
+		169808781AA1CA3D00F7DF71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 169808761AA1CA3D00F7DF71 /* Main.storyboard */; };
+		1698087A1AA1CA3D00F7DF71 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 169808791AA1CA3D00F7DF71 /* Images.xcassets */; };
+		1698087D1AA1CA3D00F7DF71 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1698087B1AA1CA3D00F7DF71 /* LaunchScreen.xib */; };
+		169808891AA1CA3D00F7DF71 /* mernis_timerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169808881AA1CA3D00F7DF71 /* mernis_timerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		169808831AA1CA3D00F7DF71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 169808651AA1CA3C00F7DF71 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1698086C1AA1CA3D00F7DF71;
+			remoteInfo = "mernis timer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1698086D1AA1CA3D00F7DF71 /* mernis timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mernis timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		169808711AA1CA3D00F7DF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		169808721AA1CA3D00F7DF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		169808741AA1CA3D00F7DF71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		169808771AA1CA3D00F7DF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		169808791AA1CA3D00F7DF71 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1698087C1AA1CA3D00F7DF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		169808821AA1CA3D00F7DF71 /* mernis timerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mernis timerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		169808871AA1CA3D00F7DF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		169808881AA1CA3D00F7DF71 /* mernis_timerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mernis_timerTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1698086A1AA1CA3D00F7DF71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1698087F1AA1CA3D00F7DF71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		169808641AA1CA3C00F7DF71 = {
+			isa = PBXGroup;
+			children = (
+				1698086F1AA1CA3D00F7DF71 /* mernis timer */,
+				169808851AA1CA3D00F7DF71 /* mernis timerTests */,
+				1698086E1AA1CA3D00F7DF71 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1698086E1AA1CA3D00F7DF71 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1698086D1AA1CA3D00F7DF71 /* mernis timer.app */,
+				169808821AA1CA3D00F7DF71 /* mernis timerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1698086F1AA1CA3D00F7DF71 /* mernis timer */ = {
+			isa = PBXGroup;
+			children = (
+				169808721AA1CA3D00F7DF71 /* AppDelegate.swift */,
+				169808741AA1CA3D00F7DF71 /* ViewController.swift */,
+				169808761AA1CA3D00F7DF71 /* Main.storyboard */,
+				169808791AA1CA3D00F7DF71 /* Images.xcassets */,
+				1698087B1AA1CA3D00F7DF71 /* LaunchScreen.xib */,
+				169808701AA1CA3D00F7DF71 /* Supporting Files */,
+			);
+			path = "mernis timer";
+			sourceTree = "<group>";
+		};
+		169808701AA1CA3D00F7DF71 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				169808711AA1CA3D00F7DF71 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		169808851AA1CA3D00F7DF71 /* mernis timerTests */ = {
+			isa = PBXGroup;
+			children = (
+				169808881AA1CA3D00F7DF71 /* mernis_timerTests.swift */,
+				169808861AA1CA3D00F7DF71 /* Supporting Files */,
+			);
+			path = "mernis timerTests";
+			sourceTree = "<group>";
+		};
+		169808861AA1CA3D00F7DF71 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				169808871AA1CA3D00F7DF71 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1698086C1AA1CA3D00F7DF71 /* mernis timer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1698088C1AA1CA3D00F7DF71 /* Build configuration list for PBXNativeTarget "mernis timer" */;
+			buildPhases = (
+				169808691AA1CA3D00F7DF71 /* Sources */,
+				1698086A1AA1CA3D00F7DF71 /* Frameworks */,
+				1698086B1AA1CA3D00F7DF71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "mernis timer";
+			productName = "mernis timer";
+			productReference = 1698086D1AA1CA3D00F7DF71 /* mernis timer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		169808811AA1CA3D00F7DF71 /* mernis timerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1698088F1AA1CA3D00F7DF71 /* Build configuration list for PBXNativeTarget "mernis timerTests" */;
+			buildPhases = (
+				1698087E1AA1CA3D00F7DF71 /* Sources */,
+				1698087F1AA1CA3D00F7DF71 /* Frameworks */,
+				169808801AA1CA3D00F7DF71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				169808841AA1CA3D00F7DF71 /* PBXTargetDependency */,
+			);
+			name = "mernis timerTests";
+			productName = "mernis timerTests";
+			productReference = 169808821AA1CA3D00F7DF71 /* mernis timerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		169808651AA1CA3C00F7DF71 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "mesa mingi";
+				TargetAttributes = {
+					1698086C1AA1CA3D00F7DF71 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					169808811AA1CA3D00F7DF71 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 1698086C1AA1CA3D00F7DF71;
+					};
+				};
+			};
+			buildConfigurationList = 169808681AA1CA3C00F7DF71 /* Build configuration list for PBXProject "mernis timer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 169808641AA1CA3C00F7DF71;
+			productRefGroup = 1698086E1AA1CA3D00F7DF71 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1698086C1AA1CA3D00F7DF71 /* mernis timer */,
+				169808811AA1CA3D00F7DF71 /* mernis timerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1698086B1AA1CA3D00F7DF71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				169808781AA1CA3D00F7DF71 /* Main.storyboard in Resources */,
+				1698087D1AA1CA3D00F7DF71 /* LaunchScreen.xib in Resources */,
+				1698087A1AA1CA3D00F7DF71 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		169808801AA1CA3D00F7DF71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		169808691AA1CA3D00F7DF71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				169808751AA1CA3D00F7DF71 /* ViewController.swift in Sources */,
+				169808731AA1CA3D00F7DF71 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1698087E1AA1CA3D00F7DF71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				169808891AA1CA3D00F7DF71 /* mernis_timerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		169808841AA1CA3D00F7DF71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1698086C1AA1CA3D00F7DF71 /* mernis timer */;
+			targetProxy = 169808831AA1CA3D00F7DF71 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		169808761AA1CA3D00F7DF71 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				169808771AA1CA3D00F7DF71 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1698087B1AA1CA3D00F7DF71 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1698087C1AA1CA3D00F7DF71 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1698088A1AA1CA3D00F7DF71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1698088B1AA1CA3D00F7DF71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1698088D1AA1CA3D00F7DF71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "mernis timer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		1698088E1AA1CA3D00F7DF71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "mernis timer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		169808901AA1CA3D00F7DF71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "mernis timerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mernis timer.app/mernis timer";
+			};
+			name = Debug;
+		};
+		169808911AA1CA3D00F7DF71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "mernis timerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mernis timer.app/mernis timer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		169808681AA1CA3C00F7DF71 /* Build configuration list for PBXProject "mernis timer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1698088A1AA1CA3D00F7DF71 /* Debug */,
+				1698088B1AA1CA3D00F7DF71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1698088C1AA1CA3D00F7DF71 /* Build configuration list for PBXNativeTarget "mernis timer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1698088D1AA1CA3D00F7DF71 /* Debug */,
+				1698088E1AA1CA3D00F7DF71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1698088F1AA1CA3D00F7DF71 /* Build configuration list for PBXNativeTarget "mernis timerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				169808901AA1CA3D00F7DF71 /* Debug */,
+				169808911AA1CA3D00F7DF71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 169808651AA1CA3C00F7DF71 /* Project object */;
+}

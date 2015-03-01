@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "169808101AA1775200F7DF71"
-               BuildableName = "timer.app"
-               BlueprintName = "timer"
-               ReferencedContainer = "container:timer.xcodeproj">
+               BlueprintIdentifier = "1698089A1AA1CF1400F7DF71"
+               BuildableName = "Interval Tabata Timer.app"
+               BlueprintName = "Interval Tabata Timer"
+               ReferencedContainer = "container:Interval Tabata Timer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "169808251AA1775200F7DF71"
-               BuildableName = "timerTests.xctest"
-               BlueprintName = "timerTests"
-               ReferencedContainer = "container:timer.xcodeproj">
+               BlueprintIdentifier = "169808B11AA1CF1400F7DF71"
+               BuildableName = "Interval Tabata TimerTests.xctest"
+               BlueprintName = "Interval Tabata TimerTests"
+               ReferencedContainer = "container:Interval Tabata Timer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "169808251AA1775200F7DF71"
-               BuildableName = "timerTests.xctest"
-               BlueprintName = "timerTests"
-               ReferencedContainer = "container:timer.xcodeproj">
+               BlueprintIdentifier = "169808B11AA1CF1400F7DF71"
+               BuildableName = "Interval Tabata TimerTests.xctest"
+               BlueprintName = "Interval Tabata TimerTests"
+               ReferencedContainer = "container:Interval Tabata Timer.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "169808101AA1775200F7DF71"
-            BuildableName = "timer.app"
-            BlueprintName = "timer"
-            ReferencedContainer = "container:timer.xcodeproj">
+            BlueprintIdentifier = "1698089A1AA1CF1400F7DF71"
+            BuildableName = "Interval Tabata Timer.app"
+            BlueprintName = "Interval Tabata Timer"
+            ReferencedContainer = "container:Interval Tabata Timer.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -75,10 +75,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "169808101AA1775200F7DF71"
-            BuildableName = "timer.app"
-            BlueprintName = "timer"
-            ReferencedContainer = "container:timer.xcodeproj">
+            BlueprintIdentifier = "1698089A1AA1CF1400F7DF71"
+            BuildableName = "Interval Tabata Timer.app"
+            BlueprintName = "Interval Tabata Timer"
+            ReferencedContainer = "container:Interval Tabata Timer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -93,10 +93,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "169808101AA1775200F7DF71"
-            BuildableName = "timer.app"
-            BlueprintName = "timer"
-            ReferencedContainer = "container:timer.xcodeproj">
+            BlueprintIdentifier = "1698089A1AA1CF1400F7DF71"
+            BuildableName = "Interval Tabata Timer.app"
+            BlueprintName = "Interval Tabata Timer"
+            ReferencedContainer = "container:Interval Tabata Timer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

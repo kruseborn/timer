@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Timer
+//  Interval Tabata Timer
 //
-//  Created by Tobias Kruseborn on 27/02/15.
+//  Created by Tobias Kruseborn on 28/02/15.
 //  Copyright (c) 2015 mesa mingi. All rights reserved.
 //
 
