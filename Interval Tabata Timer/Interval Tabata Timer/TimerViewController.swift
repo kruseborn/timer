@@ -74,7 +74,6 @@ class TimerViewController: UIViewController {
     }
     
     func updateTimer() {
-        println("2: " + String(timerValues[2]))
         timerValues[2]--
         if(timerValues[2] < 0 && timerValues[1] > 0) {
             timerValues[2] = 59
