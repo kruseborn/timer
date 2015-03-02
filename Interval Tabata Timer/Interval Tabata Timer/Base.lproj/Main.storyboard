@@ -274,7 +274,7 @@
                             <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="6MP-zo-Wrt" userLabel="roundToolbar">
                                 <rect key="frame" x="0.0" y="82" width="414" height="44"/>
                                 <items>
-                                    <barButtonItem title="Round" id="fEW-7k-LKF">
+                                    <barButtonItem title="Rounds" id="fEW-7k-LKF">
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="KYM-Xk-LIt"/>
@@ -295,7 +295,7 @@
                             <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="kX7-Q7-dAA" userLabel="workTimeToolbar">
                                 <rect key="frame" x="0.0" y="126" width="414" height="44"/>
                                 <items>
-                                    <barButtonItem title="Work Time" id="mZ6-80-r6j">
+                                    <barButtonItem title="Work time" id="mZ6-80-r6j">
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Oqm-oy-TYI"/>
@@ -318,7 +318,7 @@
                             <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="spO-nn-Lp6" userLabel="restTimeToolbar">
                                 <rect key="frame" x="0.0" y="170" width="414" height="44"/>
                                 <items>
-                                    <barButtonItem title="Rest Time" id="tRl-9k-rXT">
+                                    <barButtonItem title="Rest time" id="tRl-9k-rXT">
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="UBQ-iP-Cj3"/>
@@ -364,7 +364,7 @@
                                     <rect key="frame" x="25" y="297" width="365" height="114"/>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" verticalHuggingPriority="248" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Round: 8/8" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pJK-5t-IaC">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" verticalHuggingPriority="248" verticalCompressionResistancePriority="749" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Round: 1/8" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pJK-5t-IaC">
                                 <rect key="frame" x="162" y="470" width="91" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -387,6 +387,7 @@
                             <constraint firstItem="Y4m-HF-HQa" firstAttribute="leading" secondItem="2yZ-x9-nKF" secondAttribute="leading" id="VA3-2k-tQ8"/>
                             <constraint firstItem="kX7-Q7-dAA" firstAttribute="top" secondItem="6MP-zo-Wrt" secondAttribute="bottom" id="ZG7-rL-4By"/>
                             <constraint firstItem="Uj5-s7-egY" firstAttribute="top" secondItem="4xK-ng-52G" secondAttribute="bottom" id="cXK-fS-cbt"/>
+                            <constraint firstAttribute="centerY" secondItem="pJK-5t-IaC" secondAttribute="centerY" constant="-110.5" id="d0C-zX-5Uu"/>
                             <constraint firstItem="spO-nn-Lp6" firstAttribute="top" secondItem="kX7-Q7-dAA" secondAttribute="bottom" id="d3t-KX-mnO"/>
                             <constraint firstAttribute="trailing" secondItem="Y4m-HF-HQa" secondAttribute="trailing" id="d8v-sn-XqC"/>
                             <constraint firstItem="4xK-ng-52G" firstAttribute="leading" secondItem="2yZ-x9-nKF" secondAttribute="leading" id="dXE-3f-YhW"/>

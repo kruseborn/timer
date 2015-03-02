@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class TimerViewController: UIViewController {
-    
+
+    var audioPlayer : AVAudioPlayer! = nil
     
     let timerPicker  : TimerPicker = TimerPicker()
     @IBOutlet weak var timerText: UITextField!
@@ -19,6 +21,28 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var startAndPauseButton: UIBarButtonItem!
     
     override func viewDidLoad() {
+        println("here we are")
+        let filePath = NSBundle.mainBundle().pathForResource("Frog", ofType: "aiff")
+        if NSFileManager.defaultManager().fileExistsAtPath(filePath!) {
+            println("file exists")
+        }
+        else {
+            println("does not exist")
+        }
+        let fileURL = NSURL(fileURLWithPath: filePath!)
+        var error : NSError?
+        println("jojojoj")
+        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error: &error)
+        if (audioPlayer.isEqual(nil)) {
+            println("There was an error: (error)")
+        }
+        else {
+            println("not nil")
+        }
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
+        println("here we are 2")
+        
         //timerPicker.backgroundColor = UIColor(white: 0.5, alpha: 1.0)
         timerPicker.delegate = timerPicker;
         timerPicker.dataSource = timerPicker;
@@ -39,14 +63,15 @@ class TimerViewController: UIViewController {
     @IBAction func TimerAction(sender: AnyObject) {
         timerText.inputView = timerPicker
         timerText.inputAccessoryView = doneToolbar
-        timerPicker.setTimerValues(timerValues)
     }
     
     func doneButton(sender:UIBarButtonItem) {
         timerValues = timerPicker.getTimerValues()
         timerText.resignFirstResponder() // To resign the inputView on clicking done.
+        startAndPauseButton.title = "Start"
+        timer.invalidate()
+        setTimerTextValues()
     }
-    
     func setTimerTextValues() {
         var strArray = ["", "", ""]
         for i in 0..<timerValues.count {
@@ -59,7 +84,6 @@ class TimerViewController: UIViewController {
         startAndPauseButton.title = "Start"
         timer.invalidate()
         setTimerTextValues()
-        
     }
  
     @IBAction func StartAndPauseAction(sender: UIBarButtonItem) {
@@ -71,6 +95,17 @@ class TimerViewController: UIViewController {
             startAndPauseButton.title = "Start"
             timer.invalidate()
         }
+    }
+    func showAlert() {
+        audioPlayer.play()
+        var title = "Timer"
+        var message = "Time is up"
+        var alert:UIAlertView = UIAlertView()
+        alert.title = title
+        alert.message = message
+        alert.addButtonWithTitle("ok")
+        alert.show()
+        
     }
     
     func updateTimer() {
@@ -84,9 +119,12 @@ class TimerViewController: UIViewController {
             }
         }
         
-        if(timerValues[0] <= 0 && timerValues[1] <= 0 && timerValues[2] <= 0) {
-            println("finished")
+        if(timerValues[0] <= 0 && timerValues[1] <= 0 && timerValues[2] < 0) {
+            showAlert()
             timerValues[0] = 0; timerValues[1] = 0; timerValues[2] = 0
+            
+            timer.invalidate()
+            return
         }
         setTimerTextValues()
     }

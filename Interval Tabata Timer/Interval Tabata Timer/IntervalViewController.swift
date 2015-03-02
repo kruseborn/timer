@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import AVFoundation
 
 class IntervalViewController: UIViewController {
+    var alarmSound = NSURL(fileURLWithPath: (NSBundle.mainBundle().pathForResource("alarmSound", ofType: "mp3"))!)!
+    var roundSounds = NSURL(fileURLWithPath: (NSBundle.mainBundle().pathForResource("change", ofType: "mp3"))!)!
     
+    var audioPlayer = AVAudioPlayer()
+    var audioPlayerRound = AVAudioPlayer()
     
     @IBOutlet weak var currentRoundText: UITextField!
     @IBOutlet weak var timerText: UITextField!
@@ -37,7 +42,14 @@ class IntervalViewController: UIViewController {
     let restTimeToolBar = UIToolbar(frame: CGRectMake(0, 0, 100, 50))
     
     override func viewDidLoad() {
+
         super.viewDidLoad()
+        audioPlayer = AVAudioPlayer(contentsOfURL: alarmSound, error: nil)
+        audioPlayer.prepareToPlay()
+        
+        audioPlayerRound = AVAudioPlayer(contentsOfURL: roundSounds, error: nil)
+        audioPlayerRound.prepareToPlay()
+
         //round picker
         roundPicker.delegate = roundPicker
         roundPicker.dataSource = roundPicker
@@ -76,23 +88,26 @@ class IntervalViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     func resetValuesFromPicker() {
-        roundValue = roundPicker.getTimerValues()
+        roundValue[0] = 1
         workTimeValues = workTimePicker.getTimerValues()
         restTimeValues = restTimePicker.getTimerValues()
         setTimerTextValue(workTimeValues)
-        currentRoundText.text = "Round: " + String(roundValue[0]) + "/" + String(roundValue[0])
+        currentRoundText.text = "Round: " + String(roundValue[0]) + "/" + String(roundPicker.getTimerValues()[0])
+        startAndPauseButton.title = "Start"
+        timer.invalidate()
     }
   
     @IBAction func roundAction(sender: UITextField) {
         roundText.inputView = roundPicker
         roundText.inputAccessoryView = roundToolBar
-        roundPicker.setTimerValues(roundValue)
     }
-    
     @IBAction func workTimeAction(sender: UITextField) {
         workTimeText.inputView = workTimePicker
         workTimeText.inputAccessoryView = workTimeToolBar
-        workTimePicker.setTimerValues(workTimeValues)
+    }
+    @IBAction func restTimeAction(sender: UITextField) {
+        restTimeText.inputView = restTimePicker
+        restTimeText.inputAccessoryView = restTimeToolBar
     }
     func workTimePickerDone() {
         resetValuesFromPicker()
@@ -105,11 +120,6 @@ class IntervalViewController: UIViewController {
     func restTimePickerDone() {
         resetValuesFromPicker()
         restTimeText.resignFirstResponder()
-    }
-  
-    @IBAction func restTimeAction(sender: UITextField) {
-        resetValuesFromPicker()
-        startAndPauseButton.title = "Start"
     }
     
     @IBAction func StartAndPauseAction(sender: UIBarButtonItem) {
@@ -128,6 +138,16 @@ class IntervalViewController: UIViewController {
     @IBAction func ResetAction(sender: AnyObject) {
         resetValuesFromPicker()
         
+    }
+    func showAlert() {
+        audioPlayer.play()
+        var title = "Timer"
+        var message = "Time is up"
+        var alert:UIAlertView = UIAlertView()
+        alert.title = title
+        alert.message = message
+        alert.addButtonWithTitle("ok")
+        alert.show()
     }
     func updateTimer() {
         if(isInWorkoutMode) {
@@ -152,16 +172,19 @@ class IntervalViewController: UIViewController {
             restTimeValues = restTimePicker.getTimerValues()
             
             if(isInWorkoutMode) {
-                roundValue[0]--
+                roundValue[0]++
             }
             else {
                 currentRoundText.text = "Round: " + String(roundValue[0]) + "/" + String(roundPicker.getTimerValues()[0])
             }
-            if(roundValue[0] == 0) {
-                currentRoundText.text = "Round: " + String(roundValue[0]) + "/" + String(roundPicker.getTimerValues()[0])
+            if((roundValue[0]-1) == roundPicker.getTimerValues()[0]) {
+                var realValue = String(roundValue[0]-1)
+                currentRoundText.text = "Round: " + realValue + "/" + String(roundPicker.getTimerValues()[0])
                 timer.invalidate()
+                showAlert()
                 return
             }
+            audioPlayerRound.play()
             isInWorkoutMode = !isInWorkoutMode
             if(isInWorkoutMode) {
                 setTimerTextValue(workTimeValues)
