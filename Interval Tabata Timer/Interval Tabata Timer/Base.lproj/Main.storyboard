@@ -3,7 +3,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -68,7 +67,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="rlh-sa-heC" secondAttribute="centerY" constant="59.5" id="8CM-98-V5E"/>
+                            <constraint firstAttribute="centerY" secondItem="rlh-sa-heC" secondAttribute="centerY" constant="20" id="8CM-98-V5E"/>
                             <constraint firstItem="z8w-oW-gqI" firstAttribute="top" secondItem="FSR-GU-zcn" secondAttribute="bottom" id="Fgq-YF-HGx"/>
                             <constraint firstAttribute="trailing" secondItem="dgG-tL-TiV" secondAttribute="trailing" constant="-16" id="HP6-b6-7dI"/>
                             <constraint firstAttribute="trailing" secondItem="FSR-GU-zcn" secondAttribute="trailing" id="Rr6-PQ-A37"/>
@@ -101,7 +100,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5b-qO-kaP">
-                                <rect key="frame" x="0.0" y="226" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="116" width="600" height="44"/>
                                 <items>
                                     <barButtonItem title="Vibrator" id="mRI-Qn-oNG">
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -116,7 +115,7 @@
                                 </items>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wrh-Oe-GqG">
-                                <rect key="frame" x="0.0" y="270" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="160" width="600" height="44"/>
                                 <items>
                                     <barButtonItem title="Delayed Start" id="GR3-ap-UJw">
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -129,8 +128,16 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lxc-Rv-pUW">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Back" width="43" id="VBt-xQ-I8h">
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybY-dn-5Sz">
-                                <rect key="frame" x="0.0" y="182" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
                                 <items>
                                     <barButtonItem title="Sound" id="F5i-cz-2dT">
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -144,24 +151,16 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lxc-Rv-pUW">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <items>
-                                    <barButtonItem title="Back" width="43" id="VBt-xQ-I8h">
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ybY-dn-5Sz" firstAttribute="top" secondItem="9uP-2v-WDh" secondAttribute="top" constant="182" id="8jF-Tr-nb9"/>
+                            <constraint firstItem="ybY-dn-5Sz" firstAttribute="top" secondItem="Lxc-Rv-pUW" secondAttribute="bottom" id="0a2-Mw-fq8"/>
+                            <constraint firstItem="wrh-Oe-GqG" firstAttribute="top" secondItem="q5b-qO-kaP" secondAttribute="bottom" id="7nF-XN-5We"/>
                             <constraint firstItem="Lxc-Rv-pUW" firstAttribute="topMargin" secondItem="bs9-ej-Bm2" secondAttribute="bottom" constant="8" id="K3i-hj-tra"/>
                             <constraint firstItem="Lxc-Rv-pUW" firstAttribute="leading" secondItem="9uP-2v-WDh" secondAttribute="leading" id="MNd-9v-g9t"/>
                             <constraint firstAttribute="trailing" secondItem="Lxc-Rv-pUW" secondAttribute="trailing" id="P2e-P4-IU7"/>
                             <constraint firstItem="ybY-dn-5Sz" firstAttribute="leading" secondItem="Lxc-Rv-pUW" secondAttribute="leading" id="RTv-RH-Y8h"/>
                             <constraint firstItem="ybY-dn-5Sz" firstAttribute="bottom" secondItem="q5b-qO-kaP" secondAttribute="top" id="Rf0-sS-crC"/>
-                            <constraint firstItem="wrh-Oe-GqG" firstAttribute="top" secondItem="q5b-qO-kaP" secondAttribute="bottom" id="Uhf-xk-t0m"/>
                             <constraint firstItem="ybY-dn-5Sz" firstAttribute="leading" secondItem="wrh-Oe-GqG" secondAttribute="leading" id="V9r-4H-vEb"/>
                             <constraint firstItem="ybY-dn-5Sz" firstAttribute="trailing" secondItem="q5b-qO-kaP" secondAttribute="trailing" id="ZuX-37-yt2"/>
                             <constraint firstItem="ybY-dn-5Sz" firstAttribute="trailing" secondItem="Lxc-Rv-pUW" secondAttribute="trailing" id="qK5-eX-P9g"/>
@@ -215,7 +214,7 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00:00:00" textAlignment="center" minimumFontSize="85" translatesAutoresizingMaskIntoConstraints="NO" id="qIx-bN-umI">
-                                <rect key="frame" x="18" y="308" width="378" height="119"/>
+                                <rect key="frame" x="18" y="308" width="378" height="81"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="127" id="tNW-hR-TMf"/>
                                 </constraints>
@@ -236,11 +235,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerY" secondItem="qIx-bN-umI" secondAttribute="centerY" constant="19.5" id="2cY-RF-3K2"/>
                             <constraint firstItem="g20-uD-6cY" firstAttribute="top" secondItem="eaw-bi-ccj" secondAttribute="bottom" id="5hT-wJ-eh0"/>
                             <constraint firstItem="eaw-bi-ccj" firstAttribute="leading" secondItem="kOT-4o-ciN" secondAttribute="leading" id="KAB-G6-fCM"/>
                             <constraint firstAttribute="trailing" secondItem="eaw-bi-ccj" secondAttribute="trailing" id="NQE-fr-Uok"/>
                             <constraint firstItem="6I0-X2-Vf7" firstAttribute="top" secondItem="Dmo-s8-loP" secondAttribute="bottom" id="YF4-sP-gl5"/>
-                            <constraint firstAttribute="centerY" secondItem="qIx-bN-umI" secondAttribute="centerY" constant="0.5" id="hdk-gS-PVq"/>
                             <constraint firstItem="6I0-X2-Vf7" firstAttribute="leading" secondItem="kOT-4o-ciN" secondAttribute="leading" id="jed-Ub-FTD"/>
                             <constraint firstAttribute="trailing" secondItem="6I0-X2-Vf7" secondAttribute="trailing" id="rEm-hs-R1y"/>
                             <constraint firstAttribute="centerX" secondItem="qIx-bN-umI" secondAttribute="centerX" id="yuI-wn-o17"/>
@@ -277,7 +276,7 @@
                                 </items>
                             </toolbar>
                             <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="6MP-zo-Wrt" userLabel="roundToolbar">
-                                <rect key="frame" x="0.0" y="82" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="Rounds" id="fEW-7k-LKF">
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -298,7 +297,7 @@
                                 </items>
                             </toolbar>
                             <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="kX7-Q7-dAA" userLabel="workTimeToolbar">
-                                <rect key="frame" x="0.0" y="126" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="116" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="Work time" id="mZ6-80-r6j">
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -312,26 +311,6 @@
                                             <textInputTraits key="textInputTraits"/>
                                             <connections>
                                                 <action selector="workTimeAction:" destination="Kup-Zq-LKR" eventType="touchDown" id="QtE-zN-CDT"/>
-                                            </connections>
-                                        </textField>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                            <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="spO-nn-Lp6" userLabel="restTimeToolbar">
-                                <rect key="frame" x="0.0" y="170" width="414" height="44"/>
-                                <items>
-                                    <barButtonItem title="Rest time" id="tRl-9k-rXT">
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="UBQ-iP-Cj3"/>
-                                    <barButtonItem style="plain" id="Taw-kf-yuY">
-                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00:00:10" borderStyle="roundedRect" minimumFontSize="17" id="Ac0-lK-wer">
-                                            <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                            <connections>
-                                                <action selector="restTimeAction:" destination="Kup-Zq-LKR" eventType="touchDown" id="JSr-Tr-aVa"/>
                                             </connections>
                                         </textField>
                                     </barButtonItem>
@@ -396,18 +375,31 @@
                                     <outlet property="delegate" destination="UBQ-iP-Cj3" id="oyv-yF-gN8"/>
                                 </connections>
                             </textField>
+                            <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="spO-nn-Lp6" userLabel="restTimeToolbar">
+                                <rect key="frame" x="0.0" y="160" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem title="Rest time" id="tRl-9k-rXT">
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="UBQ-iP-Cj3"/>
+                                    <barButtonItem style="plain" id="Taw-kf-yuY">
+                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00:00:10" borderStyle="roundedRect" minimumFontSize="17" id="Ac0-lK-wer">
+                                            <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="restTimeAction:" destination="Kup-Zq-LKR" eventType="touchDown" id="JSr-Tr-aVa"/>
+                                            </connections>
+                                        </textField>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="spO-nn-Lp6" firstAttribute="leading" secondItem="2yZ-x9-nKF" secondAttribute="leading" id="0Qc-eh-9MD"/>
-                            <constraint firstAttribute="centerY" secondItem="xxk-dj-DKA" secondAttribute="centerY" constant="-82.5" id="6BJ-du-B0z"/>
                             <constraint firstAttribute="centerX" secondItem="IUx-fG-FYj" secondAttribute="centerX" id="71s-6n-vb6"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="IUx-fG-FYj" secondAttribute="trailing" constant="-42" id="KgL-qJ-2v5"/>
-                            <constraint firstItem="IUx-fG-FYj" firstAttribute="leading" secondItem="2yZ-x9-nKF" secondAttribute="leadingMargin" constant="-42" id="LZw-h1-HhM"/>
-                            <constraint firstItem="6MP-zo-Wrt" firstAttribute="centerX" secondItem="spO-nn-Lp6" secondAttribute="centerX" id="MRO-3u-zof"/>
-                            <constraint firstAttribute="centerY" secondItem="xxk-dj-DKA" secondAttribute="centerY" constant="-82.5" id="NIC-m1-99d">
-                                <variation key="widthClass=compact" constant="-100"/>
-                            </constraint>
                             <constraint firstAttribute="trailing" secondItem="kX7-Q7-dAA" secondAttribute="trailing" id="OuH-vE-LgF"/>
                             <constraint firstAttribute="trailing" secondItem="spO-nn-Lp6" secondAttribute="trailing" id="SuH-qY-12U"/>
                             <constraint firstItem="Y4m-HF-HQa" firstAttribute="leading" secondItem="2yZ-x9-nKF" secondAttribute="leading" id="VA3-2k-tQ8"/>
@@ -415,46 +407,21 @@
                             <constraint firstItem="xxk-dj-DKA" firstAttribute="centerX" secondItem="IUx-fG-FYj" secondAttribute="centerX" constant="0.5" id="ahX-lZ-Ox0"/>
                             <constraint firstItem="Uj5-s7-egY" firstAttribute="top" secondItem="4xK-ng-52G" secondAttribute="bottom" id="cXK-fS-cbt"/>
                             <constraint firstItem="spO-nn-Lp6" firstAttribute="top" secondItem="kX7-Q7-dAA" secondAttribute="bottom" id="d3t-KX-mnO"/>
-                            <constraint firstAttribute="trailing" secondItem="Y4m-HF-HQa" secondAttribute="trailing" id="d8v-sn-XqC"/>
                             <constraint firstItem="4xK-ng-52G" firstAttribute="leading" secondItem="2yZ-x9-nKF" secondAttribute="leading" id="dXE-3f-YhW"/>
                             <constraint firstItem="6MP-zo-Wrt" firstAttribute="leading" secondItem="2yZ-x9-nKF" secondAttribute="leading" id="gKg-lV-IZ5"/>
-                            <constraint firstAttribute="centerY" secondItem="IUx-fG-FYj" secondAttribute="centerY" constant="0.5" id="hbg-Rk-MOT">
+                            <constraint firstAttribute="centerY" secondItem="IUx-fG-FYj" secondAttribute="centerY" id="hbg-Rk-MOT">
                                 <variation key="widthClass=compact" constant="-25"/>
                             </constraint>
                             <constraint firstAttribute="trailing" secondItem="4xK-ng-52G" secondAttribute="trailing" id="hep-DX-0ZK"/>
+                            <constraint firstItem="6MP-zo-Wrt" firstAttribute="top" secondItem="Y4m-HF-HQa" secondAttribute="bottom" id="hir-HI-532"/>
                             <constraint firstItem="6MP-zo-Wrt" firstAttribute="centerX" secondItem="Y4m-HF-HQa" secondAttribute="centerX" id="m2c-10-JNQ"/>
-                            <constraint firstItem="xxk-dj-DKA" firstAttribute="top" secondItem="IUx-fG-FYj" secondAttribute="bottom" constant="34" id="pEi-Yp-sIN">
-                                <variation key="widthClass=compact" constant="20"/>
+                            <constraint firstItem="xxk-dj-DKA" firstAttribute="top" secondItem="IUx-fG-FYj" secondAttribute="bottom" id="pEi-Yp-sIN">
+                                <variation key="widthClass=compact" constant="15"/>
                             </constraint>
                             <constraint firstItem="Y4m-HF-HQa" firstAttribute="top" secondItem="cyX-YB-xbf" secondAttribute="bottom" constant="8" id="q9B-RG-GGK"/>
                             <constraint firstItem="kX7-Q7-dAA" firstAttribute="leading" secondItem="2yZ-x9-nKF" secondAttribute="leading" id="qb2-UK-rnI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="IUx-fG-FYj" secondAttribute="trailing" constant="-42" id="qq7-fZ-oQk"/>
                             <constraint firstItem="6MP-zo-Wrt" firstAttribute="centerX" secondItem="4xK-ng-52G" secondAttribute="centerX" id="rBy-8l-p83"/>
-                            <constraint firstAttribute="trailing" secondItem="6MP-zo-Wrt" secondAttribute="trailing" id="w4V-Uc-c0C"/>
-                            <constraint firstItem="xxk-dj-DKA" firstAttribute="width" secondItem="IUx-fG-FYj" secondAttribute="height" multiplier="3:1" id="wly-fR-Ypy"/>
-                            <constraint firstItem="6MP-zo-Wrt" firstAttribute="top" secondItem="Y4m-HF-HQa" secondAttribute="bottom" constant="10" id="xQ1-FZ-3m4"/>
-                            <constraint firstItem="6MP-zo-Wrt" firstAttribute="centerX" secondItem="kX7-Q7-dAA" secondAttribute="centerX" id="xs5-EP-jJl"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="KgL-qJ-2v5"/>
-                                <exclude reference="LZw-h1-HhM"/>
-                                <exclude reference="qq7-fZ-oQk"/>
-                                <exclude reference="6BJ-du-B0z"/>
-                                <exclude reference="NIC-m1-99d"/>
-                                <exclude reference="wly-fR-Ypy"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="constraints">
-                                <include reference="KgL-qJ-2v5"/>
-                                <include reference="LZw-h1-HhM"/>
-                                <include reference="qq7-fZ-oQk"/>
-                                <include reference="6BJ-du-B0z"/>
-                                <include reference="NIC-m1-99d"/>
-                                <include reference="wly-fR-Ypy"/>
-                            </mask>
-                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Interval" id="vdb-vV-kWq"/>
                     <connections>
