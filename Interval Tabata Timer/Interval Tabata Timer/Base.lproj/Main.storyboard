@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -49,15 +50,16 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="127" id="7hC-EB-5Le"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="82"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="7hC-EB-5Le"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="12" y="239" width="391" height="119"/>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="180"/>
+                                    <rect key="frame" x="12" y="239" width="392" height="140"/>
                                 </variation>
                                 <connections>
                                     <action selector="TimerAction:" destination="19i-14-ZZ8" eventType="touchDown" id="5OS-9V-UOc"/>
@@ -217,12 +219,15 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="127" id="tNW-hR-TMf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="tNW-hR-TMf"/>
                                     </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="180"/>
                                 </variation>
                                 <connections>
                                     <action selector="TimerAction:" destination="9gm-1w-gql" eventType="touchDown" id="Tar-vM-xLa"/>
@@ -311,9 +316,6 @@
                                         </textField>
                                     </barButtonItem>
                                 </items>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="155" width="414" height="44"/>
-                                </variation>
                             </toolbar>
                             <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="spO-nn-Lp6" userLabel="restTimeToolbar">
                                 <rect key="frame" x="0.0" y="170" width="414" height="44"/>
@@ -334,9 +336,6 @@
                                         </textField>
                                     </barButtonItem>
                                 </items>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="199" width="414" height="44"/>
-                                </variation>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xK-ng-52G" userLabel="bottomToolbar">
                                 <rect key="frame" x="0.0" y="643" width="414" height="44"/>
@@ -356,71 +355,112 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="748" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="00:00:20" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w7F-Dv-Al0">
-                                <rect key="frame" x="118" y="406" width="178" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="84"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Round 1/8" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xxk-dj-DKA">
+                                <rect key="frame" x="164" y="404" width="97" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="25" y="297" width="365" height="114"/>
-                                </variation>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" verticalHuggingPriority="248" verticalCompressionResistancePriority="749" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Round: 1/8" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pJK-5t-IaC">
-                                <rect key="frame" x="162" y="470" width="91" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="47" y="396" width="303" height="67"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="116" y="435" width="192" height="31"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="162" y="472" width="90" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="66"/>
+                                    <rect key="frame" x="46" y="486" width="324" height="65"/>
                                 </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="00:00:00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IUx-fG-FYj">
+                                <rect key="frame" x="57" y="328" width="310" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="g40-mf-Tu6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="85"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="g40-mf-Tu6"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="85"/>
+                                    <rect key="frame" x="-26" y="356" width="466" height="64"/>
+                                    <mask key="constraints">
+                                        <include reference="g40-mf-Tu6"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="200"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="UBQ-iP-Cj3" id="oyv-yF-gN8"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="spO-nn-Lp6" firstAttribute="leading" secondItem="2yZ-x9-nKF" secondAttribute="leading" id="0Qc-eh-9MD"/>
-                            <constraint firstAttribute="centerX" secondItem="pJK-5t-IaC" secondAttribute="centerX" constant="-0.5" id="AZS-2l-ls2"/>
+                            <constraint firstAttribute="centerY" secondItem="xxk-dj-DKA" secondAttribute="centerY" constant="-82.5" id="6BJ-du-B0z"/>
+                            <constraint firstAttribute="centerX" secondItem="IUx-fG-FYj" secondAttribute="centerX" id="71s-6n-vb6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IUx-fG-FYj" secondAttribute="trailing" constant="-42" id="KgL-qJ-2v5"/>
+                            <constraint firstItem="IUx-fG-FYj" firstAttribute="leading" secondItem="2yZ-x9-nKF" secondAttribute="leadingMargin" constant="-42" id="LZw-h1-HhM"/>
                             <constraint firstItem="6MP-zo-Wrt" firstAttribute="centerX" secondItem="spO-nn-Lp6" secondAttribute="centerX" id="MRO-3u-zof"/>
+                            <constraint firstAttribute="centerY" secondItem="xxk-dj-DKA" secondAttribute="centerY" constant="-82.5" id="NIC-m1-99d">
+                                <variation key="widthClass=compact" constant="-100"/>
+                            </constraint>
                             <constraint firstAttribute="trailing" secondItem="kX7-Q7-dAA" secondAttribute="trailing" id="OuH-vE-LgF"/>
-                            <constraint firstAttribute="centerX" secondItem="w7F-Dv-Al0" secondAttribute="centerX" id="S4K-jl-l9l"/>
                             <constraint firstAttribute="trailing" secondItem="spO-nn-Lp6" secondAttribute="trailing" id="SuH-qY-12U"/>
                             <constraint firstItem="Y4m-HF-HQa" firstAttribute="leading" secondItem="2yZ-x9-nKF" secondAttribute="leading" id="VA3-2k-tQ8"/>
                             <constraint firstItem="kX7-Q7-dAA" firstAttribute="top" secondItem="6MP-zo-Wrt" secondAttribute="bottom" id="ZG7-rL-4By"/>
+                            <constraint firstItem="xxk-dj-DKA" firstAttribute="centerX" secondItem="IUx-fG-FYj" secondAttribute="centerX" constant="0.5" id="ahX-lZ-Ox0"/>
                             <constraint firstItem="Uj5-s7-egY" firstAttribute="top" secondItem="4xK-ng-52G" secondAttribute="bottom" id="cXK-fS-cbt"/>
-                            <constraint firstAttribute="centerY" secondItem="pJK-5t-IaC" secondAttribute="centerY" constant="-110.5" id="d0C-zX-5Uu"/>
                             <constraint firstItem="spO-nn-Lp6" firstAttribute="top" secondItem="kX7-Q7-dAA" secondAttribute="bottom" id="d3t-KX-mnO"/>
                             <constraint firstAttribute="trailing" secondItem="Y4m-HF-HQa" secondAttribute="trailing" id="d8v-sn-XqC"/>
                             <constraint firstItem="4xK-ng-52G" firstAttribute="leading" secondItem="2yZ-x9-nKF" secondAttribute="leading" id="dXE-3f-YhW"/>
                             <constraint firstItem="6MP-zo-Wrt" firstAttribute="leading" secondItem="2yZ-x9-nKF" secondAttribute="leading" id="gKg-lV-IZ5"/>
+                            <constraint firstAttribute="centerY" secondItem="IUx-fG-FYj" secondAttribute="centerY" constant="0.5" id="hbg-Rk-MOT">
+                                <variation key="widthClass=compact" constant="-25"/>
+                            </constraint>
                             <constraint firstAttribute="trailing" secondItem="4xK-ng-52G" secondAttribute="trailing" id="hep-DX-0ZK"/>
-                            <constraint firstAttribute="centerY" secondItem="pJK-5t-IaC" secondAttribute="centerY" constant="-112.5" id="iIQ-kV-H5j"/>
                             <constraint firstItem="6MP-zo-Wrt" firstAttribute="centerX" secondItem="Y4m-HF-HQa" secondAttribute="centerX" id="m2c-10-JNQ"/>
+                            <constraint firstItem="xxk-dj-DKA" firstAttribute="top" secondItem="IUx-fG-FYj" secondAttribute="bottom" constant="34" id="pEi-Yp-sIN">
+                                <variation key="widthClass=compact" constant="20"/>
+                            </constraint>
                             <constraint firstItem="Y4m-HF-HQa" firstAttribute="top" secondItem="cyX-YB-xbf" secondAttribute="bottom" constant="8" id="q9B-RG-GGK"/>
                             <constraint firstItem="kX7-Q7-dAA" firstAttribute="leading" secondItem="2yZ-x9-nKF" secondAttribute="leading" id="qb2-UK-rnI"/>
-                            <constraint firstAttribute="centerY" secondItem="w7F-Dv-Al0" secondAttribute="centerY" constant="-55" id="qja-lR-6DW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IUx-fG-FYj" secondAttribute="trailing" constant="-42" id="qq7-fZ-oQk"/>
                             <constraint firstItem="6MP-zo-Wrt" firstAttribute="centerX" secondItem="4xK-ng-52G" secondAttribute="centerX" id="rBy-8l-p83"/>
                             <constraint firstAttribute="trailing" secondItem="6MP-zo-Wrt" secondAttribute="trailing" id="w4V-Uc-c0C"/>
+                            <constraint firstItem="xxk-dj-DKA" firstAttribute="width" secondItem="IUx-fG-FYj" secondAttribute="height" multiplier="3:1" id="wly-fR-Ypy"/>
                             <constraint firstItem="6MP-zo-Wrt" firstAttribute="top" secondItem="Y4m-HF-HQa" secondAttribute="bottom" constant="10" id="xQ1-FZ-3m4"/>
                             <constraint firstItem="6MP-zo-Wrt" firstAttribute="centerX" secondItem="kX7-Q7-dAA" secondAttribute="centerX" id="xs5-EP-jJl"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="iIQ-kV-H5j"/>
+                                <exclude reference="KgL-qJ-2v5"/>
+                                <exclude reference="LZw-h1-HhM"/>
+                                <exclude reference="qq7-fZ-oQk"/>
+                                <exclude reference="6BJ-du-B0z"/>
+                                <exclude reference="NIC-m1-99d"/>
+                                <exclude reference="wly-fR-Ypy"/>
                             </mask>
                         </variation>
-                        <variation key="heightClass=regular-widthClass=regular">
+                        <variation key="widthClass=compact">
                             <mask key="constraints">
-                                <include reference="iIQ-kV-H5j"/>
+                                <include reference="KgL-qJ-2v5"/>
+                                <include reference="LZw-h1-HhM"/>
+                                <include reference="qq7-fZ-oQk"/>
+                                <include reference="6BJ-du-B0z"/>
+                                <include reference="NIC-m1-99d"/>
+                                <include reference="wly-fR-Ypy"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Interval" id="vdb-vV-kWq"/>
                     <connections>
                         <outlet property="RoundText" destination="oyH-ZA-3tm" id="x3H-E3-glx"/>
-                        <outlet property="currentRoundText" destination="pJK-5t-IaC" id="rHW-RH-gfm"/>
                         <outlet property="restTimeText" destination="Ac0-lK-wer" id="6W8-KS-dd6"/>
                         <outlet property="startAndPauseButton" destination="0Sp-5g-JGl" id="KMb-b7-3X8"/>
-                        <outlet property="timerText" destination="w7F-Dv-Al0" id="m0G-Ct-ZMu"/>
                         <outlet property="workTimeText" destination="GsQ-b6-9YR" id="YIJ-Re-yIc"/>
                     </connections>
                 </viewController>

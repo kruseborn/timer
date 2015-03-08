@@ -22,7 +22,7 @@ class TimerViewController: UIViewController {
     
     override func viewDidLoad() {
         println("here we are")
-        let filePath = NSBundle.mainBundle().pathForResource("Frog", ofType: "aiff")
+        let filePath = NSBundle.mainBundle().pathForResource("alarmSound", ofType: "mp3")
         if NSFileManager.defaultManager().fileExistsAtPath(filePath!) {
             println("file exists")
         }
@@ -40,6 +40,7 @@ class TimerViewController: UIViewController {
             println("not nil")
         }
         audioPlayer.prepareToPlay()
+        audioPlayer.volume = 1
         audioPlayer.play()
         println("here we are 2")
         
