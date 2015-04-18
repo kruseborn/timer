@@ -53,7 +53,7 @@ class IntervalViewController: UIViewController {
         //round picker
         roundPicker.delegate = roundPicker
         roundPicker.dataSource = roundPicker
-        roundPicker.initialize(roundText, initValues: roundValue, valuesPerComponent: totalRoundValues, addPrefix: false)
+        roundPicker.initialize(roundText, initValues: roundValue, valuesPerComponent: totalRoundValues, addPrefix: false, zeroIndex: false)
         var barButton = UIBarButtonItem(title: "Done", style: .Plain, target:self, action: "roundPickerDone")
         var toolbarButtons = [barButton];
         roundToolBar.setItems(toolbarButtons, animated: true)
@@ -73,6 +73,8 @@ class IntervalViewController: UIViewController {
         var restTimeBarButton = UIBarButtonItem(title: "Done", style: .Plain, target:self, action: "restTimePickerDone")
         var restTimeToolbarButtons = [restTimeBarButton];
         restTimeToolBar.setItems(restTimeToolbarButtons, animated: true)
+        resetValuesFromPicker();
+
         
     }
     
@@ -148,6 +150,7 @@ class IntervalViewController: UIViewController {
         alert.message = message
         alert.addButtonWithTitle("ok")
         alert.show()
+        resetValuesFromPicker()
     }
     func updateTimer() {
         if(isInWorkoutMode) {

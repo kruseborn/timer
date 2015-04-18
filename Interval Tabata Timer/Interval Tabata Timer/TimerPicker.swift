@@ -10,13 +10,14 @@ import UIKit
 
 class TimerPicker : UIPickerView {
     
-    func initialize(timerText: UITextField!, initValues : [Int], valuesPerComponent : [Int], addPrefix : Bool ) {
+    func initialize(timerText: UITextField!, initValues : [Int], valuesPerComponent : [Int], addPrefix : Bool, zeroIndex : Bool = true) {
+        _zeroIndex = zeroIndex
         _timerText = timerText
         _valueArray = initValues
         _strArray = [String](count: initValues.count, repeatedValue: "")
         _valuesPerComponent = valuesPerComponent
         _addPrefix = addPrefix
-        for i in 0..<initValues.count {
+        for i in 0 ..< initValues.count {
             self.selectRow(_valueArray[i], inComponent: i, animated: true)
         }
     }
@@ -35,6 +36,7 @@ class TimerPicker : UIPickerView {
     var _valuesPerComponent = [Int]()
     var _strArray = [String]()
     var _addPrefix = true
+    var _zeroIndex = true
 }
 extension TimerPicker: UIPickerViewDataSource {
     
@@ -47,11 +49,17 @@ extension TimerPicker: UIPickerViewDataSource {
 }
 extension TimerPicker: UIPickerViewDelegate {
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        if(_zeroIndex == false) {
+            return String(row + 1);
+        }
         return String(row)
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         _valueArray[component] = row
+        if(_zeroIndex == false) {
+            _valueArray[component] = row + 1
+        }
         for i in 0..<_valueArray.count {
             _strArray[i] = (_valueArray[i] < 10 && _addPrefix ? "0" + String(_valueArray[i]) : String(_valueArray[i]))
         }

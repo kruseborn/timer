@@ -334,18 +334,6 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Round 1/8" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xxk-dj-DKA">
-                                <rect key="frame" x="164" y="404" width="97" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="116" y="435" width="192" height="31"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <fontDescription key="fontDescription" type="system" pointSize="66"/>
-                                    <rect key="frame" x="46" y="486" width="324" height="65"/>
-                                </variation>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="00:00:00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IUx-fG-FYj">
                                 <rect key="frame" x="57" y="328" width="310" height="68"/>
                                 <constraints>
@@ -371,9 +359,6 @@
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <fontDescription key="fontDescription" type="system" pointSize="200"/>
                                 </variation>
-                                <connections>
-                                    <outlet property="delegate" destination="UBQ-iP-Cj3" id="oyv-yF-gN8"/>
-                                </connections>
                             </textField>
                             <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="spO-nn-Lp6" userLabel="restTimeToolbar">
                                 <rect key="frame" x="0.0" y="160" width="414" height="44"/>
@@ -395,6 +380,18 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Round 1/8" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xxk-dj-DKA">
+                                <rect key="frame" x="164" y="404" width="97" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="116" y="435" width="192" height="31"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="66"/>
+                                    <rect key="frame" x="46" y="486" width="324" height="65"/>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -426,8 +423,11 @@
                     <tabBarItem key="tabBarItem" title="Interval" id="vdb-vV-kWq"/>
                     <connections>
                         <outlet property="RoundText" destination="oyH-ZA-3tm" id="x3H-E3-glx"/>
+                        <outlet property="currentRoundText" destination="xxk-dj-DKA" id="GCW-Rg-D6k"/>
                         <outlet property="restTimeText" destination="Ac0-lK-wer" id="6W8-KS-dd6"/>
+                        <outlet property="roundText" destination="oyH-ZA-3tm" id="VPe-tK-EkR"/>
                         <outlet property="startAndPauseButton" destination="0Sp-5g-JGl" id="KMb-b7-3X8"/>
+                        <outlet property="timerText" destination="IUx-fG-FYj" id="bey-8p-t5O"/>
                         <outlet property="workTimeText" destination="GsQ-b6-9YR" id="YIJ-Re-yIc"/>
                     </connections>
                 </viewController>
