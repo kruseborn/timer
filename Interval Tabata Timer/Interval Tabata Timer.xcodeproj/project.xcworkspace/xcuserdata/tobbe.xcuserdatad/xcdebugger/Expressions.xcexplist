@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "Interval_Tabata_Timer.IntervalViewController.updateTimer_ (Interval_Tabata_Timer.IntervalViewController)(inout Swift.Array&lt;Swift.Int&gt;) -&gt; ():IntervalViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "_soundIsOn">
+            </PersistentString>
+            <PersistentString
+               value = "delayTime">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Interval_Tabata_Timer.IntervalViewController.setTimerTextValue (Interval_Tabata_Timer.IntervalViewController)(Swift.Array&lt;Swift.Int&gt;) -&gt; ():IntervalViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "timerText">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Interval_Tabata_Timer.SettingViewController.viewDidLoad (Interval_Tabata_Timer.SettingViewController)() -&gt; ():SettingViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "delayPicker">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

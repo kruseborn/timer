@@ -35,6 +35,10 @@ class SettingViewController: UIViewController {
     }
     func delayPickerDone() {
         _delayTime = delayPicker.getTimerValues()[0]
+        var delayTimeDefault = NSUserDefaults.standardUserDefaults()
+        delayTimeDefault.setValue(_delayTime, forKey: _delayKey)
+        delayTimeDefault.synchronize()
+        
         delayText.resignFirstResponder()
     }
 
@@ -49,9 +53,15 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var soundOnOrOff: UISwitch!
     @IBAction func SoundSwitchAction(sender: UISwitch) {
         _soundIsOn = !_soundIsOn
+        var soundTimeDefault = NSUserDefaults.standardUserDefaults()
+        soundTimeDefault.setValue(_soundIsOn, forKey: _soundKey)
+        soundTimeDefault.synchronize()
     }
     @IBAction func vibratorAction(sender: UISwitch) {
         _vibratorOn = !_vibratorOn
+        var vibrateTimeDefault = NSUserDefaults.standardUserDefaults()
+        vibrateTimeDefault.setValue(_vibratorOn, forKey: _vibrateKey)
+        vibrateTimeDefault.synchronize()
     }
  
     

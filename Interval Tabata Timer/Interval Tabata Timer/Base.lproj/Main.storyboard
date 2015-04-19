@@ -90,6 +90,7 @@
         <!--Setting View Controller-->
         <scene sceneID="cJU-GP-e50">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ni1-zZ-6vH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="kV0-ej-Fh2" customClass="SettingViewController" customModule="Interval_Tabata_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bs9-ej-Bm2"/>
@@ -99,25 +100,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q5b-qO-kaP">
-                                <rect key="frame" x="0.0" y="116" width="414" height="44"/>
-                                <items>
-                                    <barButtonItem title="Vibrator" id="mRI-Qn-oNG">
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="CHp-cA-Rp6"/>
-                                    <barButtonItem style="plain" id="7Oy-nS-zUS">
-                                        <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="tUf-SJ-b4a">
-                                            <rect key="frame" x="-25" y="-15" width="51" height="31"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <connections>
-                                                <action selector="vibratorAction:" destination="kV0-ej-Fh2" eventType="valueChanged" id="Pzo-9c-SN4"/>
-                                            </connections>
-                                        </switch>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ybY-dn-5Sz">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybY-dn-5Sz">
                                 <rect key="frame" x="0.0" y="72" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="Sound" id="F5i-cz-2dT">
@@ -135,8 +118,26 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wrh-Oe-GqG">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KPm-AP-v3a">
                                 <rect key="frame" x="0.0" y="160" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem title="Sound effects" id="YgB-fu-HlO">
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="YlD-Dj-TPI"/>
+                                    <barButtonItem style="plain" id="MUJ-Gv-HCt">
+                                        <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="Oo6-zu-4wc">
+                                            <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="SoundSwitchAction:" destination="kV0-ej-Fh2" eventType="valueChanged" id="6Wa-Rh-ZWa"/>
+                                            </connections>
+                                        </switch>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wrh-Oe-GqG">
+                                <rect key="frame" x="0.0" y="204" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="Delayed Start" id="GR3-ap-UJw">
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -155,15 +156,39 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5b-qO-kaP">
+                                <rect key="frame" x="0.0" y="116" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem title="Vibrator" id="mRI-Qn-oNG">
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="CHp-cA-Rp6"/>
+                                    <barButtonItem style="plain" id="7Oy-nS-zUS">
+                                        <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="tUf-SJ-b4a">
+                                            <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="vibratorAction:" destination="kV0-ej-Fh2" eventType="valueChanged" id="Pzo-9c-SN4"/>
+                                            </connections>
+                                        </switch>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wrh-Oe-GqG" firstAttribute="leading" secondItem="9uP-2v-WDh" secondAttribute="leading" id="1ze-gy-JvY"/>
-                            <constraint firstItem="q5b-qO-kaP" firstAttribute="leading" secondItem="9uP-2v-WDh" secondAttribute="leading" id="8hr-eB-1q8"/>
-                            <constraint firstAttribute="trailing" secondItem="q5b-qO-kaP" secondAttribute="trailing" id="IMx-P2-nPy"/>
-                            <constraint firstItem="ybY-dn-5Sz" firstAttribute="leading" secondItem="9uP-2v-WDh" secondAttribute="leading" id="N8o-gh-bAq"/>
-                            <constraint firstAttribute="trailing" secondItem="wrh-Oe-GqG" secondAttribute="trailing" id="aVn-hy-5fL"/>
-                            <constraint firstAttribute="trailing" secondItem="ybY-dn-5Sz" secondAttribute="trailing" id="mzT-Aj-umK"/>
+                            <constraint firstAttribute="trailing" secondItem="q5b-qO-kaP" secondAttribute="trailing" id="FJG-IX-Eqj"/>
+                            <constraint firstItem="ybY-dn-5Sz" firstAttribute="top" secondItem="bs9-ej-Bm2" secondAttribute="bottom" constant="8" id="GEQ-9C-jgk"/>
+                            <constraint firstItem="wrh-Oe-GqG" firstAttribute="leading" secondItem="KPm-AP-v3a" secondAttribute="leading" id="Gr6-i8-1io"/>
+                            <constraint firstItem="KPm-AP-v3a" firstAttribute="top" secondItem="q5b-qO-kaP" secondAttribute="bottom" id="IV5-LW-ELb"/>
+                            <constraint firstItem="q5b-qO-kaP" firstAttribute="top" secondItem="ybY-dn-5Sz" secondAttribute="bottom" id="Lw5-GJ-fKT"/>
+                            <constraint firstItem="KPm-AP-v3a" firstAttribute="trailing" secondItem="wrh-Oe-GqG" secondAttribute="trailing" id="cyN-yP-3di"/>
+                            <constraint firstItem="KPm-AP-v3a" firstAttribute="leading" secondItem="9uP-2v-WDh" secondAttribute="leading" id="iFC-zx-v69"/>
+                            <constraint firstItem="q5b-qO-kaP" firstAttribute="trailing" secondItem="KPm-AP-v3a" secondAttribute="trailing" id="p6S-2N-zHR"/>
+                            <constraint firstItem="wrh-Oe-GqG" firstAttribute="top" secondItem="KPm-AP-v3a" secondAttribute="bottom" id="r3S-if-A05"/>
+                            <constraint firstItem="q5b-qO-kaP" firstAttribute="leading" secondItem="ybY-dn-5Sz" secondAttribute="leading" id="tOr-kl-ARg"/>
+                            <constraint firstItem="KPm-AP-v3a" firstAttribute="leading" secondItem="q5b-qO-kaP" secondAttribute="leading" id="tUk-1w-7Ua"/>
+                            <constraint firstItem="q5b-qO-kaP" firstAttribute="trailing" secondItem="ybY-dn-5Sz" secondAttribute="trailing" id="td7-ln-Jf2"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -176,7 +201,6 @@
                         <outlet property="vibratorOnOrOff" destination="tUf-SJ-b4a" id="TUu-0y-B6L"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ni1-zZ-6vH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="474" y="-212"/>
         </scene>
@@ -333,7 +357,7 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="00:00:00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IUx-fG-FYj">
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="00:00:00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IUx-fG-FYj">
                                 <rect key="frame" x="57" y="328" width="310" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="78" id="g40-mf-Tu6"/>
@@ -379,7 +403,7 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Round 1/8" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xxk-dj-DKA">
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Round 1/8" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xxk-dj-DKA">
                                 <rect key="frame" x="164" y="404" width="97" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -391,14 +415,21 @@
                                     <rect key="frame" x="46" y="486" width="324" height="65"/>
                                 </variation>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y7N-rh-8u0">
+                                <rect key="frame" x="118" y="353" width="188" height="138"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="spO-nn-Lp6" firstAttribute="leading" secondItem="2yZ-x9-nKF" secondAttribute="leading" id="0Qc-eh-9MD"/>
                             <constraint firstAttribute="centerX" secondItem="IUx-fG-FYj" secondAttribute="centerX" id="71s-6n-vb6"/>
+                            <constraint firstAttribute="centerX" secondItem="Y7N-rh-8u0" secondAttribute="centerX" id="JQK-bZ-75m"/>
                             <constraint firstAttribute="trailing" secondItem="kX7-Q7-dAA" secondAttribute="trailing" id="OuH-vE-LgF"/>
                             <constraint firstAttribute="trailing" secondItem="spO-nn-Lp6" secondAttribute="trailing" id="SuH-qY-12U"/>
                             <constraint firstItem="kX7-Q7-dAA" firstAttribute="top" secondItem="6MP-zo-Wrt" secondAttribute="bottom" id="ZG7-rL-4By"/>
+                            <constraint firstAttribute="centerY" secondItem="Y7N-rh-8u0" secondAttribute="centerY" id="ZQO-Kp-Y0g"/>
                             <constraint firstItem="xxk-dj-DKA" firstAttribute="centerX" secondItem="IUx-fG-FYj" secondAttribute="centerX" constant="0.5" id="ahX-lZ-Ox0"/>
                             <constraint firstItem="Uj5-s7-egY" firstAttribute="top" secondItem="4xK-ng-52G" secondAttribute="bottom" id="cXK-fS-cbt"/>
                             <constraint firstItem="spO-nn-Lp6" firstAttribute="top" secondItem="kX7-Q7-dAA" secondAttribute="bottom" id="d3t-KX-mnO"/>
@@ -433,6 +464,7 @@
                     <connections>
                         <outlet property="RoundText" destination="oyH-ZA-3tm" id="x3H-E3-glx"/>
                         <outlet property="currentRoundText" destination="xxk-dj-DKA" id="GCW-Rg-D6k"/>
+                        <outlet property="delayText" destination="Y7N-rh-8u0" id="nPF-w3-JAD"/>
                         <outlet property="restTimeText" destination="Ac0-lK-wer" id="6W8-KS-dd6"/>
                         <outlet property="roundText" destination="oyH-ZA-3tm" id="VPe-tK-EkR"/>
                         <outlet property="startAndPauseButton" destination="0Sp-5g-JGl" id="KMb-b7-3X8"/>
@@ -525,6 +557,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nd6-Dp-anp"/>
+        <segue reference="9UT-2W-UD3"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -37,15 +37,18 @@ class StopwatchViewController: UIViewController {
         timer.invalidate()
         timerText.text = "00:00:00"
         startAndPuseButton.title = "Start"
+        UIApplication.sharedApplication().idleTimerDisabled = false
     }
     
     @IBAction func startTimer(sender: UIBarButtonItem) {
         if(startAndPuseButton.title == "Start") {
             timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
             startAndPuseButton.title = "Stop"
+            UIApplication.sharedApplication().idleTimerDisabled = true
         }
         else {
             startAndPuseButton.title = "Start"
+            UIApplication.sharedApplication().idleTimerDisabled = false
             timer.invalidate()
         }
     }

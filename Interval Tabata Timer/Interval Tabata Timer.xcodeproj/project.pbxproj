@@ -19,6 +19,11 @@
 		169808AD1AA1CF1400F7DF71 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169808AB1AA1CF1400F7DF71 /* LaunchScreen.xib */; };
 		169808B91AA1CF1400F7DF71 /* Interval_Tabata_TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169808B81AA1CF1400F7DF71 /* Interval_Tabata_TimerTests.swift */; };
 		16D796611AE277AC0094FDC4 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D796601AE277AC0094FDC4 /* SettingViewController.swift */; };
+		16D796A71AE3C6770094FDC4 /* alarmclock2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16D796A21AE3C6770094FDC4 /* alarmclock2.mp3 */; };
+		16D796A81AE3C6770094FDC4 /* final_round.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16D796A31AE3C6770094FDC4 /* final_round.mp3 */; };
+		16D796A91AE3C6770094FDC4 /* gogo.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16D796A41AE3C6770094FDC4 /* gogo.wav */; };
+		16D796AA1AE3C6770094FDC4 /* outstanding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16D796A51AE3C6770094FDC4 /* outstanding.mp3 */; };
+		16D796AB1AE3C6770094FDC4 /* warning_beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16D796A61AE3C6770094FDC4 /* warning_beep.mp3 */; };
 		16DF86091AA4FF660082C756 /* Frog.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 16DF86081AA4FF660082C756 /* Frog.aiff */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +54,11 @@
 		169808B71AA1CF1400F7DF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		169808B81AA1CF1400F7DF71 /* Interval_Tabata_TimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interval_Tabata_TimerTests.swift; sourceTree = "<group>"; };
 		16D796601AE277AC0094FDC4 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		16D796A21AE3C6770094FDC4 /* alarmclock2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alarmclock2.mp3; path = "Interval Tabata Timer/alarmclock2.mp3"; sourceTree = "<group>"; };
+		16D796A31AE3C6770094FDC4 /* final_round.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = final_round.mp3; path = "Interval Tabata Timer/final_round.mp3"; sourceTree = "<group>"; };
+		16D796A41AE3C6770094FDC4 /* gogo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = gogo.wav; path = "Interval Tabata Timer/gogo.wav"; sourceTree = "<group>"; };
+		16D796A51AE3C6770094FDC4 /* outstanding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = outstanding.mp3; path = "Interval Tabata Timer/outstanding.mp3"; sourceTree = "<group>"; };
+		16D796A61AE3C6770094FDC4 /* warning_beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = warning_beep.mp3; path = "Interval Tabata Timer/warning_beep.mp3"; sourceTree = "<group>"; };
 		16DF86081AA4FF660082C756 /* Frog.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = Frog.aiff; path = ../../../../../../System/Library/Sounds/Frog.aiff; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +83,11 @@
 		1666D5B31AA4C1EF000FF75F /* resourses */ = {
 			isa = PBXGroup;
 			children = (
+				16D796A21AE3C6770094FDC4 /* alarmclock2.mp3 */,
+				16D796A31AE3C6770094FDC4 /* final_round.mp3 */,
+				16D796A41AE3C6770094FDC4 /* gogo.wav */,
+				16D796A51AE3C6770094FDC4 /* outstanding.mp3 */,
+				16D796A61AE3C6770094FDC4 /* warning_beep.mp3 */,
 				16DF86081AA4FF660082C756 /* Frog.aiff */,
 				1666D5F51AA4CF52000FF75F /* change.mp3 */,
 				1666D5F31AA4CF45000FF75F /* alarmSound.mp3 */,
@@ -226,7 +241,12 @@
 				169808A81AA1CF1400F7DF71 /* Main.storyboard in Resources */,
 				169808AD1AA1CF1400F7DF71 /* LaunchScreen.xib in Resources */,
 				16DF86091AA4FF660082C756 /* Frog.aiff in Resources */,
+				16D796A71AE3C6770094FDC4 /* alarmclock2.mp3 in Resources */,
+				16D796AA1AE3C6770094FDC4 /* outstanding.mp3 in Resources */,
 				1666D5F41AA4CF45000FF75F /* alarmSound.mp3 in Resources */,
+				16D796A91AE3C6770094FDC4 /* gogo.wav in Resources */,
+				16D796A81AE3C6770094FDC4 /* final_round.mp3 in Resources */,
+				16D796AB1AE3C6770094FDC4 /* warning_beep.mp3 in Resources */,
 				169808AA1AA1CF1400F7DF71 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

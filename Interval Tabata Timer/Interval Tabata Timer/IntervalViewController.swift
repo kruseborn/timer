@@ -12,6 +12,13 @@ import AVFoundation
 var _soundIsOn = true
 var _vibratorOn = true
 var _delayTime = 4
+var _delayKey = "delay"
+var _vibrateKey = "vibrate"
+var _soundKey = "sound"
+
+var _roundKey = "round"
+var _workTimeKey = "worktime"
+var _restTimeKey = "resttime"
 
 class IntervalViewController: UIViewController {
     var alarmSound = NSURL(fileURLWithPath: (NSBundle.mainBundle().pathForResource("alarmSound", ofType: "mp3"))!)!
@@ -29,6 +36,8 @@ class IntervalViewController: UIViewController {
     @IBOutlet weak var roundText: UITextField!
     let roundPicker  : TimerPicker = TimerPicker()
     var roundValue = [8]
+    var currentRoundValue = 1
+    
     var totalRoundValues = [100]
     let roundToolBar = UIToolbar(frame: CGRectMake(0, 0, 100, 50))
     
@@ -38,6 +47,7 @@ class IntervalViewController: UIViewController {
     var workTimeTotals = [60,60,60]
     let workTimeToolBar = UIToolbar(frame: CGRectMake(0, 0, 100, 50))
     
+    @IBOutlet weak var delayText: UITextField!
     
     @IBOutlet weak var restTimeText: UITextField!
     let restTimePicker  : TimerPicker = TimerPicker()
@@ -49,14 +59,33 @@ class IntervalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var defaults = NSUserDefaults.standardUserDefaults()
+        if(defaults.valueForKey(_delayKey) != nil) {
+            _delayTime = defaults.valueForKey(_delayKey) as NSInteger!
+        }
+        if(defaults.valueForKey(_soundKey) != nil) {
+            _soundIsOn = defaults.valueForKey(_soundKey) as Bool!
+        }
+        if(defaults.valueForKey(_vibrateKey) != nil) {
+            _vibratorOn = defaults.valueForKey(_vibrateKey) as Bool!
+        }
+        if(defaults.valueForKey(_workTimeKey) != nil) {
+            workTimeValues = defaults.valueForKey(_workTimeKey) as [Int]
+        }
+        if(defaults.valueForKey(_restTimeKey) != nil) {
+            restTimeValues = defaults.valueForKey(_restTimeKey) as [Int]
+        }
+        if(defaults.valueForKey(_roundKey) != nil) {
+            roundValue = defaults.valueForKey(_roundKey) as [Int]
+        }
         audioPlayer = AVAudioPlayer(contentsOfURL: alarmSound, error: nil)
         audioPlayer.prepareToPlay()
         
         audioPlayerRound = AVAudioPlayer(contentsOfURL: roundSounds, error: nil)
-        audioPlayerRound.volume = 0.1
         audioPlayerRound.prepareToPlay()
         
 
+        delayText.alpha = 0.0
         //round picker
         roundPicker.delegate = roundPicker
         roundPicker.dataSource = roundPicker
@@ -97,15 +126,31 @@ class IntervalViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     func resetValuesFromPicker() {
-        roundValue[0] = 1
+        UIApplication.sharedApplication().idleTimerDisabled = false
+        currentRoundValue = 1
+        roundValue[0] = roundPicker.getTimerValues()[0]
         workTimeValues = workTimePicker.getTimerValues()
         restTimeValues = restTimePicker.getTimerValues()
         setTimerTextValue(workTimeValues)
-        currentRoundText.text = "Round: " + String(roundValue[0]) + "/" + String(roundPicker.getTimerValues()[0])
+        currentRoundText.text = "Round: " + String(currentRoundValue) + "/" + String(roundValue[0])
         startAndPauseButton.title = "Start"
         isInWorkoutMode = true
         hasStarted =  false
         delayTime = _delayTime
+        timerText.alpha = 1.0
+        currentRoundText.alpha = 1.0
+        delayText.alpha = 0.0
+        delayText.text = String(delayTime)
+        
+        //store value to phone
+        var defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setValue(workTimeValues, forKey: _workTimeKey)
+        defaults.synchronize()
+        defaults.setValue(restTimeValues, forKey: _restTimeKey)
+        defaults.synchronize()
+        defaults.setValue(roundValue, forKey: _roundKey)
+        defaults.synchronize()
+        
         timer.invalidate()
     }
   
@@ -138,6 +183,7 @@ class IntervalViewController: UIViewController {
         if(startAndPauseButton.title == "Start") {
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
             startAndPauseButton.title = "Pause"
+            UIApplication.sharedApplication().idleTimerDisabled = true
         }
         else {
             startAndPauseButton.title = "Start"
@@ -174,9 +220,20 @@ class IntervalViewController: UIViewController {
     }
     func updateTimer_(inout timerValues : [Int]) {
         if(delayTime > 0) {
+            timerText.alpha = 0.2
+            currentRoundText.alpha = 0.2
+            delayText.alpha = 1.0
+            delayText.text = String(delayTime)
             delayTime--
             return
         }
+        if(hasStarted == false) {
+            hasStarted = true
+            
+        }
+        timerText.alpha = 1.0
+        currentRoundText.alpha = 1.0
+        delayText.alpha = 0.0
         timerValues[2]--
         if(timerValues[2] < 0 && timerValues[1] > 0) {
             timerValues[2] = 59
@@ -191,13 +248,13 @@ class IntervalViewController: UIViewController {
             restTimeValues = restTimePicker.getTimerValues()
             
             if(isInWorkoutMode) {
-                roundValue[0]++
+                currentRoundValue++
             }
             else {
-                currentRoundText.text = "Round: " + String(roundValue[0]) + "/" + String(roundPicker.getTimerValues()[0])
+                currentRoundText.text = "Round: " + String(currentRoundValue) + "/" + String(roundValue[0])
             }
-            if((roundValue[0]-1) == roundPicker.getTimerValues()[0]) {
-                var realValue = String(roundValue[0]-1)
+            if((currentRoundValue-1) == roundPicker.getTimerValues()[0]) {
+                var realValue = String(currentRoundValue-1)
                 currentRoundText.text = "Round: " + realValue + "/" + String(roundPicker.getTimerValues()[0])
                 timer.invalidate()
                 showAlert()

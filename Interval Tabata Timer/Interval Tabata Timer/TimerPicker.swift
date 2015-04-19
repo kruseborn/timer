@@ -20,6 +20,7 @@ class TimerPicker : UIPickerView {
         for i in 0 ..< initValues.count {
             self.selectRow(_valueArray[i], inComponent: i, animated: true)
         }
+        setTextValues()
     }
     func setTimerValues(values : [Int]) {
         _valueArray = values
@@ -29,6 +30,20 @@ class TimerPicker : UIPickerView {
     }
     func getTimerValues() -> [Int] {
         return _valueArray
+    }
+    
+    func setTextValues() {
+        for i in 0..<_valueArray.count {
+            _strArray[i] = (_valueArray[i] < 10 && _addPrefix ? "0" + String(_valueArray[i]) : String(_valueArray[i]))
+        }
+        var str = ""
+        for i in 0..<_valueArray.count {
+            if(i > 0) {
+                str += ":"
+            }
+            str += _strArray[i]
+        }
+        _timerText.text = str
     }
     
     var _timerText: UITextField! = nil
@@ -60,18 +75,8 @@ extension TimerPicker: UIPickerViewDelegate {
         if(_zeroIndex == false) {
             _valueArray[component] = row + 1
         }
-        
-        for i in 0..<_valueArray.count {
-            _strArray[i] = (_valueArray[i] < 10 && _addPrefix ? "0" + String(_valueArray[i]) : String(_valueArray[i]))
-        }
-        var str = ""
-        for i in 0..<_valueArray.count {
-            if(i > 0) {
-                str += ":"
-            }
-            str += _strArray[i]
-        }
-        _timerText.text = str
+        setTextValues()
+
     }
     
 }

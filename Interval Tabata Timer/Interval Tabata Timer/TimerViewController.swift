@@ -73,15 +73,18 @@ class TimerViewController: UIViewController {
         startAndPauseButton.title = "Start"
         timer.invalidate()
         setTimerTextValues()
+        UIApplication.sharedApplication().idleTimerDisabled = false
     }
  
     @IBAction func StartAndPauseAction(sender: UIBarButtonItem) {
         if(startAndPauseButton.title == "Start") {
             timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
             startAndPauseButton.title = "Stop"
+            UIApplication.sharedApplication().idleTimerDisabled = true
         }
         else {
             startAndPauseButton.title = "Start"
+            UIApplication.sharedApplication().idleTimerDisabled = false
             timer.invalidate()
         }
     }

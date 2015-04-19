@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Interval Tabata Timer/StopwatchViewController.swift"
-            timestampString = "446911822.783101"
+            timestampString = "451129952.541514"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "updateTimer()"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Interval Tabata Timer/TimerPicker.swift"
-            timestampString = "451041231.873537"
+            timestampString = "451130958.301661"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "numberOfComponentsInPickerView(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Interval Tabata Timer/TimerPicker.swift"
-            timestampString = "451041231.873537"
+            timestampString = "451130958.301661"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "pickerView(_:numberOfRowsInComponent:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Interval Tabata Timer/TimerViewController.swift"
-            timestampString = "451120315.913156"
+            timestampString = "451129952.541514"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "updateTimer()"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Interval Tabata Timer/TimerPicker.swift"
-            timestampString = "451041231.873537"
+            timestampString = "451130958.301661"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "pickerView(_:numberOfRowsInComponent:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Interval Tabata Timer/TimerViewController.swift"
-            timestampString = "451120315.913156"
+            timestampString = "451129952.541514"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "showAlert()"
             landmarkType = "5">
          </BreakpointContent>
@@ -152,11 +152,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Interval Tabata Timer/IntervalViewController.swift"
-            timestampString = "451121067.34686"
+            timestampString = "451134204.684286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "247"
+            endingLineNumber = "247"
             landmarkName = "updateTimer_(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -168,11 +168,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Interval Tabata Timer/IntervalViewController.swift"
-            timestampString = "451121067.34686"
+            timestampString = "451134204.684286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "197"
-            endingLineNumber = "197"
+            startingLineNumber = "250"
+            endingLineNumber = "250"
             landmarkName = "updateTimer_(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -184,11 +184,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Interval Tabata Timer/IntervalViewController.swift"
-            timestampString = "451121067.34686"
+            timestampString = "451134204.684286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
             landmarkName = "resetValuesFromPicker()"
             landmarkType = "5">
          </BreakpointContent>
@@ -200,11 +200,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Interval Tabata Timer/IntervalViewController.swift"
-            timestampString = "451121067.34686"
+            timestampString = "451134204.684286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
             landmarkName = "restTimeAction(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -216,11 +216,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Interval Tabata Timer/IntervalViewController.swift"
-            timestampString = "451121067.34686"
+            timestampString = "451134204.684286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "201"
-            endingLineNumber = "201"
+            startingLineNumber = "254"
+            endingLineNumber = "254"
             landmarkName = "updateTimer_(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -248,11 +248,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Interval Tabata Timer/IntervalViewController.swift"
-            timestampString = "451121067.34686"
+            timestampString = "451134204.684286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "setTimerTextValue(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -264,11 +264,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Interval Tabata Timer/IntervalViewController.swift"
-            timestampString = "451121067.34686"
+            timestampString = "451134204.684286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
+            startingLineNumber = "253"
+            endingLineNumber = "253"
             landmarkName = "updateTimer_(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -280,11 +280,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Interval Tabata Timer/IntervalViewController.swift"
-            timestampString = "451121067.34686"
+            timestampString = "451134204.684286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "180"
-            endingLineNumber = "180"
+            startingLineNumber = "233"
+            endingLineNumber = "233"
             landmarkName = "updateTimer_(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -296,11 +296,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Interval Tabata Timer/IntervalViewController.swift"
-            timestampString = "451121067.34686"
+            timestampString = "451134204.684286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
+            startingLineNumber = "234"
+            endingLineNumber = "234"
             landmarkName = "updateTimer_(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -312,11 +312,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Interval Tabata Timer/SettingViewController.swift"
-            timestampString = "451118851.616101"
+            timestampString = "451129952.541514"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "SoundSwitchAction(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -328,11 +328,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Interval Tabata Timer/IntervalViewController.swift"
-            timestampString = "451121067.34686"
+            timestampString = "451134204.684286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "206"
-            endingLineNumber = "206"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
             landmarkName = "updateTimer_(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -388,11 +388,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Interval Tabata Timer/SettingViewController.swift"
-            timestampString = "451118851.616101"
+            timestampString = "451129952.541514"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "delayPickerDone()"
             landmarkType = "5">
          </BreakpointContent>
@@ -436,12 +436,76 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Interval Tabata Timer/TimerPicker.swift"
-            timestampString = "451062069.194543"
+            timestampString = "451130958.301661"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "setTimerValues(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Interval Tabata Timer/IntervalViewController.swift"
+            timestampString = "451134320.432511"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
+            landmarkName = "updateTimer_(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Interval Tabata Timer/IntervalViewController.swift"
+            timestampString = "451131565.602031"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Interval Tabata Timer/IntervalViewController.swift"
+            timestampString = "451131565.602031"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Interval Tabata Timer/IntervalViewController.swift"
+            timestampString = "451134124.258787"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
+            landmarkName = "updateTimer_(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
