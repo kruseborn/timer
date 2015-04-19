@@ -21,28 +21,16 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var startAndPauseButton: UIBarButtonItem!
     
     override func viewDidLoad() {
-        println("here we are")
         let filePath = NSBundle.mainBundle().pathForResource("alarmSound", ofType: "mp3")
-        if NSFileManager.defaultManager().fileExistsAtPath(filePath!) {
-            println("file exists")
-        }
-        else {
-            println("does not exist")
-        }
+        
         let fileURL = NSURL(fileURLWithPath: filePath!)
         var error : NSError?
-        println("jojojoj")
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error: &error)
-        if (audioPlayer.isEqual(nil)) {
-            println("There was an error: (error)")
-        }
-        else {
-            println("not nil")
-        }
+
         audioPlayer.prepareToPlay()
         audioPlayer.volume = 1
         audioPlayer.play()
-        println("here we are 2")
+
         
         //timerPicker.backgroundColor = UIColor(white: 0.5, alpha: 1.0)
         timerPicker.delegate = timerPicker;
@@ -98,7 +86,12 @@ class TimerViewController: UIViewController {
         }
     }
     func showAlert() {
-        audioPlayer.play()
+        if(_soundIsOn) {
+            audioPlayer.play()
+        }
+        if(_vibratorOn) {
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        }
         var title = "Timer"
         var message = "Time is up"
         var alert:UIAlertView = UIAlertView()

@@ -60,6 +60,7 @@ extension TimerPicker: UIPickerViewDelegate {
         if(_zeroIndex == false) {
             _valueArray[component] = row + 1
         }
+        
         for i in 0..<_valueArray.count {
             _strArray[i] = (_valueArray[i] < 10 && _addPrefix ? "0" + String(_valueArray[i]) : String(_valueArray[i]))
         }

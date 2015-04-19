@@ -9,6 +9,10 @@
 import UIKit
 import AVFoundation
 
+var _soundIsOn = true
+var _vibratorOn = true
+var _delayTime = 4
+
 class IntervalViewController: UIViewController {
     var alarmSound = NSURL(fileURLWithPath: (NSBundle.mainBundle().pathForResource("alarmSound", ofType: "mp3"))!)!
     var roundSounds = NSURL(fileURLWithPath: (NSBundle.mainBundle().pathForResource("change", ofType: "mp3"))!)!
@@ -40,15 +44,18 @@ class IntervalViewController: UIViewController {
     var restTimeValues = [0,0,10]
     var restTimeTotals = [60,60,60]
     let restTimeToolBar = UIToolbar(frame: CGRectMake(0, 0, 100, 50))
+    var hasStarted = false
+    var delayTime = 0
     
     override func viewDidLoad() {
-
         super.viewDidLoad()
         audioPlayer = AVAudioPlayer(contentsOfURL: alarmSound, error: nil)
         audioPlayer.prepareToPlay()
         
         audioPlayerRound = AVAudioPlayer(contentsOfURL: roundSounds, error: nil)
+        audioPlayerRound.volume = 0.1
         audioPlayerRound.prepareToPlay()
+        
 
         //round picker
         roundPicker.delegate = roundPicker
@@ -96,6 +103,9 @@ class IntervalViewController: UIViewController {
         setTimerTextValue(workTimeValues)
         currentRoundText.text = "Round: " + String(roundValue[0]) + "/" + String(roundPicker.getTimerValues()[0])
         startAndPauseButton.title = "Start"
+        isInWorkoutMode = true
+        hasStarted =  false
+        delayTime = _delayTime
         timer.invalidate()
     }
   
@@ -125,9 +135,6 @@ class IntervalViewController: UIViewController {
     }
     
     @IBAction func StartAndPauseAction(sender: UIBarButtonItem) {
-        if(roundValue[0] == 0) {
-            return
-        }
         if(startAndPauseButton.title == "Start") {
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
             startAndPauseButton.title = "Pause"
@@ -142,7 +149,12 @@ class IntervalViewController: UIViewController {
         
     }
     func showAlert() {
-        audioPlayer.play()
+        if(_soundIsOn) {
+            audioPlayer.play()
+        }
+        if(_vibratorOn) {
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        }
         var title = "Timer"
         var message = "Time is up"
         var alert:UIAlertView = UIAlertView()
@@ -161,6 +173,10 @@ class IntervalViewController: UIViewController {
         }
     }
     func updateTimer_(inout timerValues : [Int]) {
+        if(delayTime > 0) {
+            delayTime--
+            return
+        }
         timerValues[2]--
         if(timerValues[2] < 0 && timerValues[1] > 0) {
             timerValues[2] = 59
@@ -187,7 +203,12 @@ class IntervalViewController: UIViewController {
                 showAlert()
                 return
             }
-            audioPlayerRound.play()
+            if(_soundIsOn) {
+               audioPlayerRound.play()
+            }
+            if(_vibratorOn) {
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            }
             isInWorkoutMode = !isInWorkoutMode
             if(isInWorkoutMode) {
                 setTimerTextValue(workTimeValues)

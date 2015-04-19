@@ -18,6 +18,7 @@
 		169808AA1AA1CF1400F7DF71 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 169808A91AA1CF1400F7DF71 /* Images.xcassets */; };
 		169808AD1AA1CF1400F7DF71 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169808AB1AA1CF1400F7DF71 /* LaunchScreen.xib */; };
 		169808B91AA1CF1400F7DF71 /* Interval_Tabata_TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169808B81AA1CF1400F7DF71 /* Interval_Tabata_TimerTests.swift */; };
+		16D796611AE277AC0094FDC4 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D796601AE277AC0094FDC4 /* SettingViewController.swift */; };
 		16DF86091AA4FF660082C756 /* Frog.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 16DF86081AA4FF660082C756 /* Frog.aiff */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		169808B21AA1CF1400F7DF71 /* Interval Tabata TimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Interval Tabata TimerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		169808B71AA1CF1400F7DF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		169808B81AA1CF1400F7DF71 /* Interval_Tabata_TimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interval_Tabata_TimerTests.swift; sourceTree = "<group>"; };
+		16D796601AE277AC0094FDC4 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		16DF86081AA4FF660082C756 /* Frog.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = Frog.aiff; path = ../../../../../../System/Library/Sounds/Frog.aiff; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 				169808A01AA1CF1400F7DF71 /* AppDelegate.swift */,
 				169808A21AA1CF1400F7DF71 /* IntervalViewController.swift */,
 				16393DFB1AA1FABF002C4099 /* StopwatchViewController.swift */,
+				16D796601AE277AC0094FDC4 /* SettingViewController.swift */,
 				169808A61AA1CF1400F7DF71 /* Main.storyboard */,
 				169808A91AA1CF1400F7DF71 /* Images.xcassets */,
 				169808AB1AA1CF1400F7DF71 /* LaunchScreen.xib */,
@@ -247,6 +250,7 @@
 				1666D5B21AA32CC7000FF75F /* TimerPicker.swift in Sources */,
 				169808A31AA1CF1400F7DF71 /* IntervalViewController.swift in Sources */,
 				16393DFC1AA1FABF002C4099 /* StopwatchViewController.swift in Sources */,
+				16D796611AE277AC0094FDC4 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
