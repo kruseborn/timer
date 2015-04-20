@@ -27,6 +27,9 @@
             <PersistentString
                value = "delayPicker">
             </PersistentString>
+            <PersistentString
+               value = "_soundIsOn">
+            </PersistentString>
          </PersistentStrings>
       </ContextState>
    </ContextStates>

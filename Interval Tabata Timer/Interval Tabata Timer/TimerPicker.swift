@@ -18,14 +18,24 @@ class TimerPicker : UIPickerView {
         _valuesPerComponent = valuesPerComponent
         _addPrefix = addPrefix
         for i in 0 ..< initValues.count {
-            self.selectRow(_valueArray[i], inComponent: i, animated: true)
+            if(!_zeroIndex) {
+                self.selectRow(_valueArray[i]-1, inComponent: i, animated: true)
+            }
+            else {
+                self.selectRow(_valueArray[i], inComponent: i, animated: true)
+            }
         }
         setTextValues()
     }
     func setTimerValues(values : [Int]) {
         _valueArray = values
         for i in 0..<_valueArray.count {
-            self.selectRow(_valueArray[i], inComponent: i, animated: true)
+            if(!_zeroIndex) {
+                self.selectRow(_valueArray[i]-1, inComponent: i, animated: true)
+            }
+            else {
+                self.selectRow(_valueArray[i], inComponent: i, animated: true)
+            }
         }
     }
     func getTimerValues() -> [Int] {

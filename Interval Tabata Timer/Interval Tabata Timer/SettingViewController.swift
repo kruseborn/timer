@@ -14,11 +14,18 @@ class SettingViewController: UIViewController {
     var totalDelayValues = [10]
     let delayToolBar = UIToolbar(frame: CGRectMake(0, 0, 100, 50))
     
+    @IBOutlet weak var delayTime: UIToolbar!
+    @IBOutlet weak var vibratorOnOrOff: UISwitch!
+    @IBOutlet weak var soundOnOrOff: UISwitch!
+    
+    @IBOutlet weak var soundEffectSwitch: UISwitch!
+    
     override func viewDidLoad() {
         delayText.text = String(_delayTime)
         var delayValue = [_delayTime]
         soundOnOrOff.on = _soundIsOn
         vibratorOnOrOff.on = _vibratorOn
+        soundEffectSwitch.on = _soundEffect
     
         delayPicker.delegate = delayPicker
         delayPicker.dataSource = delayPicker
@@ -48,9 +55,15 @@ class SettingViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBOutlet weak var delayTime: UIToolbar!
-    @IBOutlet weak var vibratorOnOrOff: UISwitch!
-    @IBOutlet weak var soundOnOrOff: UISwitch!
+  
+    
+    @IBAction func soundEffectAction(sender: UISwitch) {
+        _soundEffect = !_soundEffect;
+        var soundEffectDefault = NSUserDefaults.standardUserDefaults()
+        soundEffectDefault.setValue(_soundEffect, forKey: _soundEffectKey)
+        soundEffectDefault.synchronize()
+    }
+    
     @IBAction func SoundSwitchAction(sender: UISwitch) {
         _soundIsOn = !_soundIsOn
         var soundTimeDefault = NSUserDefaults.standardUserDefaults()

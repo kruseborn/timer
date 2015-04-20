@@ -28,9 +28,6 @@ class TimerViewController: UIViewController {
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error: &error)
 
         audioPlayer.prepareToPlay()
-        audioPlayer.volume = 1
-        audioPlayer.play()
-
         
         //timerPicker.backgroundColor = UIColor(white: 0.5, alpha: 1.0)
         timerPicker.delegate = timerPicker;

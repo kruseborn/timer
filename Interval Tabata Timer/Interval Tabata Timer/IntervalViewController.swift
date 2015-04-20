@@ -9,9 +9,11 @@
 import UIKit
 import AVFoundation
 
+var _soundEffect = true
+var _soundEffectKey = "soundEffect"
 var _soundIsOn = true
 var _vibratorOn = true
-var _delayTime = 4
+var _delayTime = 3
 var _delayKey = "delay"
 var _vibrateKey = "vibrate"
 var _soundKey = "sound"
@@ -22,10 +24,24 @@ var _restTimeKey = "resttime"
 
 class IntervalViewController: UIViewController {
     var alarmSound = NSURL(fileURLWithPath: (NSBundle.mainBundle().pathForResource("alarmSound", ofType: "mp3"))!)!
-    var roundSounds = NSURL(fileURLWithPath: (NSBundle.mainBundle().pathForResource("change", ofType: "mp3"))!)!
+    var roundSounds = NSURL(fileURLWithPath: (NSBundle.mainBundle().pathForResource("round_sound", ofType: "mp3"))!)!
+    var delaySound = NSURL(fileURLWithPath: (NSBundle.mainBundle().pathForResource("warning_beep", ofType: "mp3"))!)!
+    
+    var finalRoundSound = NSURL(fileURLWithPath: (NSBundle.mainBundle().pathForResource("final_round", ofType: "mp3"))!)!
+    var gogoSound = NSURL(fileURLWithPath: (NSBundle.mainBundle().pathForResource("gogo", ofType: "wav"))!)!
+    var finishSound = NSURL(fileURLWithPath: (NSBundle.mainBundle().pathForResource("outstanding", ofType: "mp3"))!)!
+    
     
     var audioPlayer = AVAudioPlayer()
     var audioPlayerRound = AVAudioPlayer()
+    
+    //var audioPlayerstartSound = AVAudioPlayer()
+    var audioPlayerDelay = AVAudioPlayer()
+    var audiPlayerFinalRound = AVAudioPlayer()
+    var audioPlayerGoGo = AVAudioPlayer()
+    var audioPlayerFinish = AVAudioPlayer()
+    
+    
     
     @IBOutlet weak var currentRoundText: UITextField!
     @IBOutlet weak var timerText: UITextField!
@@ -55,10 +71,11 @@ class IntervalViewController: UIViewController {
     var restTimeTotals = [60,60,60]
     let restTimeToolBar = UIToolbar(frame: CGRectMake(0, 0, 100, 50))
     var hasStarted = false
-    var delayTime = 0
+    var delayTime = _delayTime
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        delayTime = _delayTime
         var defaults = NSUserDefaults.standardUserDefaults()
         if(defaults.valueForKey(_delayKey) != nil) {
             _delayTime = defaults.valueForKey(_delayKey) as NSInteger!
@@ -68,6 +85,9 @@ class IntervalViewController: UIViewController {
         }
         if(defaults.valueForKey(_vibrateKey) != nil) {
             _vibratorOn = defaults.valueForKey(_vibrateKey) as Bool!
+        }
+        if(defaults.valueForKey(_soundEffectKey) != nil) {
+            _soundEffect = defaults.valueForKey(_soundEffectKey) as Bool!
         }
         if(defaults.valueForKey(_workTimeKey) != nil) {
             workTimeValues = defaults.valueForKey(_workTimeKey) as [Int]
@@ -83,6 +103,18 @@ class IntervalViewController: UIViewController {
         
         audioPlayerRound = AVAudioPlayer(contentsOfURL: roundSounds, error: nil)
         audioPlayerRound.prepareToPlay()
+        
+        //audioPlayerstartSound = AVAudioPlayer(contentsOfURL: startSound, error: nil)
+        //audioPlayerstartSound.prepareToPlay()
+        audioPlayerDelay = AVAudioPlayer(contentsOfURL: delaySound, error: nil)
+        audioPlayerDelay.prepareToPlay()
+        audiPlayerFinalRound = AVAudioPlayer(contentsOfURL: finalRoundSound, error: nil)
+        audiPlayerFinalRound.prepareToPlay()
+        audioPlayerGoGo = AVAudioPlayer(contentsOfURL: gogoSound, error: nil)
+        audioPlayerGoGo.prepareToPlay()
+        audioPlayerFinish = AVAudioPlayer(contentsOfURL: finishSound, error: nil)
+        audioPlayerFinish.prepareToPlay()
+      
         
 
         delayText.alpha = 0.0
@@ -184,6 +216,9 @@ class IntervalViewController: UIViewController {
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
             startAndPauseButton.title = "Pause"
             UIApplication.sharedApplication().idleTimerDisabled = true
+            if(!hasStarted) {
+                delayTime = _delayTime
+            }
         }
         else {
             startAndPauseButton.title = "Start"
@@ -196,7 +231,12 @@ class IntervalViewController: UIViewController {
     }
     func showAlert() {
         if(_soundIsOn) {
-            audioPlayer.play()
+            if(_soundEffect == true) {
+                audioPlayerFinish.play()
+            }
+            else {
+                audioPlayer.play()
+            }
         }
         if(_vibratorOn) {
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
@@ -205,9 +245,13 @@ class IntervalViewController: UIViewController {
         var message = "Time is up"
         var alert:UIAlertView = UIAlertView()
         alert.title = title
+        alert.delegate = self
         alert.message = message
         alert.addButtonWithTitle("ok")
         alert.show()
+        
+    }
+    func alertView(View: UIAlertView!, clickedButtonAtIndex buttonIndex: Int){
         resetValuesFromPicker()
     }
     func updateTimer() {
@@ -220,6 +264,11 @@ class IntervalViewController: UIViewController {
     }
     func updateTimer_(inout timerValues : [Int]) {
         if(delayTime > 0) {
+            if(delayTime == 3) {
+                if(_soundIsOn) {
+                    audioPlayerDelay.play()
+                }
+            }
             timerText.alpha = 0.2
             currentRoundText.alpha = 0.2
             delayText.alpha = 1.0
@@ -227,13 +276,22 @@ class IntervalViewController: UIViewController {
             delayTime--
             return
         }
-        if(hasStarted == false) {
-            hasStarted = true
-            
-        }
         timerText.alpha = 1.0
         currentRoundText.alpha = 1.0
         delayText.alpha = 0.0
+        if(hasStarted == false) {
+            hasStarted = true
+            if(_soundIsOn) {
+                if(_soundEffect) {
+                    audioPlayerGoGo.play();
+                }
+                else {
+                    //audioPlayerstartSound.play()
+                    audioPlayerRound.play()
+                }
+            }
+            return
+        }
         timerValues[2]--
         if(timerValues[2] < 0 && timerValues[1] > 0) {
             timerValues[2] = 59
@@ -261,7 +319,12 @@ class IntervalViewController: UIViewController {
                 return
             }
             if(_soundIsOn) {
-               audioPlayerRound.play()
+                if(currentRoundValue == roundValue[0] && _soundEffect == true && !isInWorkoutMode) {
+                    audiPlayerFinalRound.play()
+                }
+                else {
+                    audioPlayerRound.play()
+                }
             }
             if(_vibratorOn) {
                 AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))

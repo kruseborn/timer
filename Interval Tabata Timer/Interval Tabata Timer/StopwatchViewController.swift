@@ -15,9 +15,9 @@ class StopwatchViewController: UIViewController {
     
     @IBOutlet weak var startAndPuseButton: UIBarButtonItem!
     
+    var ms = 0
     var seconds = 0
     var minutes = 0
-    var hours = 0
     var timer = NSTimer()
     
     override func viewDidLoad() {
@@ -31,9 +31,9 @@ class StopwatchViewController: UIViewController {
     
     
     @IBAction func ResetTimer(sender: AnyObject) {
+        ms = 0
         seconds = 0
         minutes = 0
-        hours = 0
         timer.invalidate()
         timerText.text = "00:00:00"
         startAndPuseButton.title = "Start"
@@ -42,7 +42,7 @@ class StopwatchViewController: UIViewController {
     
     @IBAction func startTimer(sender: UIBarButtonItem) {
         if(startAndPuseButton.title == "Start") {
-            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
             startAndPuseButton.title = "Stop"
             UIApplication.sharedApplication().idleTimerDisabled = true
         }
@@ -53,18 +53,18 @@ class StopwatchViewController: UIViewController {
         }
     }
     func updateTimer() {
-        seconds++
+        ms++
+        if(ms == 100) {
+            ms = 0
+            seconds++;
+        }
         if(seconds == 60) {
             seconds = 0
-            minutes++;
+            minutes++
         }
-        if(minutes == 60) {
-            minutes = 0
-            hours++
-        }
-        var secStr = (seconds < 10 ? "0" + String(seconds) : String(seconds))
-        var minutesStr = (minutes < 10 ?  "0" + String(minutes) : String(minutes))
-        var hoursStr = (hours < 10 ? "0" + String(hours) :  String(hours))
+        var secStr = (ms < 10 ? "0" + String(ms) : String(ms))
+        var minutesStr = (seconds < 10 ?  "0" + String(seconds) : String(seconds))
+        var hoursStr = (minutes < 10 ? "0" + String(minutes) :  String(minutes))
         timerText.text = hoursStr + ":" + minutesStr + ":" + secStr
     }
     

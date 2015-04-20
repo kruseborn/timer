@@ -69,7 +69,7 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Sel-iw-SX9">
                                 <rect key="frame" x="-23" y="-15" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Setting">
+                                <state key="normal" title="Settings">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -90,7 +90,6 @@
         <!--Setting View Controller-->
         <scene sceneID="cJU-GP-e50">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ni1-zZ-6vH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="kV0-ej-Fh2" customClass="SettingViewController" customModule="Interval_Tabata_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bs9-ej-Bm2"/>
@@ -130,7 +129,7 @@
                                             <rect key="frame" x="-25" y="-15" width="51" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <connections>
-                                                <action selector="SoundSwitchAction:" destination="kV0-ej-Fh2" eventType="valueChanged" id="6Wa-Rh-ZWa"/>
+                                                <action selector="soundEffectAction:" destination="kV0-ej-Fh2" eventType="valueChanged" id="Jrx-Zk-2X4"/>
                                             </connections>
                                         </switch>
                                     </barButtonItem>
@@ -197,10 +196,12 @@
                     <connections>
                         <outlet property="delayText" destination="1gI-AD-nYR" id="vFl-DA-QPk"/>
                         <outlet property="delayTime" destination="wrh-Oe-GqG" id="fxG-hG-GEf"/>
+                        <outlet property="soundEffectSwitch" destination="Oo6-zu-4wc" id="P4X-Gv-E9n"/>
                         <outlet property="soundOnOrOff" destination="cLy-hZ-AI4" id="51q-aq-yzC"/>
                         <outlet property="vibratorOnOrOff" destination="tUf-SJ-b4a" id="TUu-0y-B6L"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ni1-zZ-6vH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="474" y="-212"/>
         </scene>
@@ -268,7 +269,7 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Tt6-y6-tFP">
                                 <rect key="frame" x="-23" y="-15" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Setting">
+                                <state key="normal" title="Settings">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -419,6 +420,9 @@
                                 <rect key="frame" x="118" y="353" width="188" height="138"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="200"/>
+                                </variation>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -452,7 +456,7 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uWX-k9-7ri">
                                 <rect key="frame" x="-23" y="-15" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Setting">
+                                <state key="normal" title="Settings">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>

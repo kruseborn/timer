@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16242D151AE425E600AF5B7C /* round_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16242D141AE425E600AF5B7C /* round_sound.mp3 */; };
 		16393DFC1AA1FABF002C4099 /* StopwatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16393DFB1AA1FABF002C4099 /* StopwatchViewController.swift */; };
 		1666D5B01AA32C9A000FF75F /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1666D5AF1AA32C9A000FF75F /* TimerViewController.swift */; };
 		1666D5B21AA32CC7000FF75F /* TimerPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1666D5B11AA32CC7000FF75F /* TimerPicker.swift */; };
 		1666D5F41AA4CF45000FF75F /* alarmSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1666D5F31AA4CF45000FF75F /* alarmSound.mp3 */; };
-		1666D5F61AA4CF52000FF75F /* change.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1666D5F51AA4CF52000FF75F /* change.mp3 */; };
 		169808A11AA1CF1400F7DF71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169808A01AA1CF1400F7DF71 /* AppDelegate.swift */; };
 		169808A31AA1CF1400F7DF71 /* IntervalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169808A21AA1CF1400F7DF71 /* IntervalViewController.swift */; };
 		169808A81AA1CF1400F7DF71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 169808A61AA1CF1400F7DF71 /* Main.storyboard */; };
@@ -19,12 +19,10 @@
 		169808AD1AA1CF1400F7DF71 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169808AB1AA1CF1400F7DF71 /* LaunchScreen.xib */; };
 		169808B91AA1CF1400F7DF71 /* Interval_Tabata_TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169808B81AA1CF1400F7DF71 /* Interval_Tabata_TimerTests.swift */; };
 		16D796611AE277AC0094FDC4 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D796601AE277AC0094FDC4 /* SettingViewController.swift */; };
-		16D796A71AE3C6770094FDC4 /* alarmclock2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16D796A21AE3C6770094FDC4 /* alarmclock2.mp3 */; };
 		16D796A81AE3C6770094FDC4 /* final_round.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16D796A31AE3C6770094FDC4 /* final_round.mp3 */; };
 		16D796A91AE3C6770094FDC4 /* gogo.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16D796A41AE3C6770094FDC4 /* gogo.wav */; };
 		16D796AA1AE3C6770094FDC4 /* outstanding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16D796A51AE3C6770094FDC4 /* outstanding.mp3 */; };
 		16D796AB1AE3C6770094FDC4 /* warning_beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16D796A61AE3C6770094FDC4 /* warning_beep.mp3 */; };
-		16DF86091AA4FF660082C756 /* Frog.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 16DF86081AA4FF660082C756 /* Frog.aiff */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,11 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16242D141AE425E600AF5B7C /* round_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = round_sound.mp3; path = "Interval Tabata Timer/round_sound.mp3"; sourceTree = "<group>"; };
 		16393DFB1AA1FABF002C4099 /* StopwatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopwatchViewController.swift; sourceTree = "<group>"; };
 		1666D5AF1AA32C9A000FF75F /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		1666D5B11AA32CC7000FF75F /* TimerPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerPicker.swift; sourceTree = "<group>"; };
 		1666D5F31AA4CF45000FF75F /* alarmSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alarmSound.mp3; path = "Interval Tabata Timer/alarmSound.mp3"; sourceTree = "<group>"; };
-		1666D5F51AA4CF52000FF75F /* change.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = change.mp3; path = "Interval Tabata Timer/change.mp3"; sourceTree = "<group>"; };
 		1698089B1AA1CF1400F7DF71 /* Interval Tabata Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Interval Tabata Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1698089F1AA1CF1400F7DF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		169808A01AA1CF1400F7DF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,12 +52,10 @@
 		169808B71AA1CF1400F7DF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		169808B81AA1CF1400F7DF71 /* Interval_Tabata_TimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interval_Tabata_TimerTests.swift; sourceTree = "<group>"; };
 		16D796601AE277AC0094FDC4 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		16D796A21AE3C6770094FDC4 /* alarmclock2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alarmclock2.mp3; path = "Interval Tabata Timer/alarmclock2.mp3"; sourceTree = "<group>"; };
 		16D796A31AE3C6770094FDC4 /* final_round.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = final_round.mp3; path = "Interval Tabata Timer/final_round.mp3"; sourceTree = "<group>"; };
 		16D796A41AE3C6770094FDC4 /* gogo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = gogo.wav; path = "Interval Tabata Timer/gogo.wav"; sourceTree = "<group>"; };
 		16D796A51AE3C6770094FDC4 /* outstanding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = outstanding.mp3; path = "Interval Tabata Timer/outstanding.mp3"; sourceTree = "<group>"; };
 		16D796A61AE3C6770094FDC4 /* warning_beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = warning_beep.mp3; path = "Interval Tabata Timer/warning_beep.mp3"; sourceTree = "<group>"; };
-		16DF86081AA4FF660082C756 /* Frog.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = Frog.aiff; path = ../../../../../../System/Library/Sounds/Frog.aiff; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,13 +79,11 @@
 		1666D5B31AA4C1EF000FF75F /* resourses */ = {
 			isa = PBXGroup;
 			children = (
-				16D796A21AE3C6770094FDC4 /* alarmclock2.mp3 */,
+				16242D141AE425E600AF5B7C /* round_sound.mp3 */,
 				16D796A31AE3C6770094FDC4 /* final_round.mp3 */,
 				16D796A41AE3C6770094FDC4 /* gogo.wav */,
 				16D796A51AE3C6770094FDC4 /* outstanding.mp3 */,
 				16D796A61AE3C6770094FDC4 /* warning_beep.mp3 */,
-				16DF86081AA4FF660082C756 /* Frog.aiff */,
-				1666D5F51AA4CF52000FF75F /* change.mp3 */,
 				1666D5F31AA4CF45000FF75F /* alarmSound.mp3 */,
 			);
 			name = resourses;
@@ -237,11 +231,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1666D5F61AA4CF52000FF75F /* change.mp3 in Resources */,
+				16242D151AE425E600AF5B7C /* round_sound.mp3 in Resources */,
 				169808A81AA1CF1400F7DF71 /* Main.storyboard in Resources */,
 				169808AD1AA1CF1400F7DF71 /* LaunchScreen.xib in Resources */,
-				16DF86091AA4FF660082C756 /* Frog.aiff in Resources */,
-				16D796A71AE3C6770094FDC4 /* alarmclock2.mp3 in Resources */,
 				16D796AA1AE3C6770094FDC4 /* outstanding.mp3 in Resources */,
 				1666D5F41AA4CF45000FF75F /* alarmSound.mp3 in Resources */,
 				16D796A91AE3C6770094FDC4 /* gogo.wav in Resources */,
