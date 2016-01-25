@@ -8,6 +8,10 @@
 
 import UIKit
 
+struct globals {
+    static var backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 255);
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

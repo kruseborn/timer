@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16134AD71C4E9AEF007767FE /* namePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16134AD61C4E9AEF007767FE /* namePicker.swift */; };
 		16242D151AE425E600AF5B7C /* round_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16242D141AE425E600AF5B7C /* round_sound.mp3 */; };
 		16393DFC1AA1FABF002C4099 /* StopwatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16393DFB1AA1FABF002C4099 /* StopwatchViewController.swift */; };
 		1666D5B01AA32C9A000FF75F /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1666D5AF1AA32C9A000FF75F /* TimerViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16134AD61C4E9AEF007767FE /* namePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = namePicker.swift; sourceTree = "<group>"; };
 		16242D141AE425E600AF5B7C /* round_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = round_sound.mp3; path = "Interval Tabata Timer/round_sound.mp3"; sourceTree = "<group>"; };
 		16393DFB1AA1FABF002C4099 /* StopwatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopwatchViewController.swift; sourceTree = "<group>"; };
 		1666D5AF1AA32C9A000FF75F /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				1698089E1AA1CF1400F7DF71 /* Supporting Files */,
 				1666D5AF1AA32C9A000FF75F /* TimerViewController.swift */,
 				1666D5B11AA32CC7000FF75F /* TimerPicker.swift */,
+				16134AD61C4E9AEF007767FE /* namePicker.swift */,
 			);
 			path = "Interval Tabata Timer";
 			sourceTree = "<group>";
@@ -194,6 +197,8 @@
 		169808931AA1CF1400F7DF71 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "mesa mingi";
 				TargetAttributes = {
@@ -262,6 +267,7 @@
 				1666D5B21AA32CC7000FF75F /* TimerPicker.swift in Sources */,
 				169808A31AA1CF1400F7DF71 /* IntervalViewController.swift in Sources */,
 				16393DFC1AA1FABF002C4099 /* StopwatchViewController.swift in Sources */,
+				16134AD71C4E9AEF007767FE /* namePicker.swift in Sources */,
 				16D796611AE277AC0094FDC4 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

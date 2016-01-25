@@ -73,7 +73,7 @@ extension TimerPicker: UIPickerViewDataSource {
     }
 }
 extension TimerPicker: UIPickerViewDelegate {
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if(_zeroIndex == false) {
             return String(row + 1);
         }

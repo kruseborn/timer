@@ -62,9 +62,9 @@ class StopwatchViewController: UIViewController {
             seconds = 0
             minutes++
         }
-        var secStr = (ms < 10 ? "0" + String(ms) : String(ms))
-        var minutesStr = (seconds < 10 ?  "0" + String(seconds) : String(seconds))
-        var hoursStr = (minutes < 10 ? "0" + String(minutes) :  String(minutes))
+        let secStr = (ms < 10 ? "0" + String(ms) : String(ms))
+        let minutesStr = (seconds < 10 ?  "0" + String(seconds) : String(seconds))
+        let hoursStr = (minutes < 10 ? "0" + String(minutes) :  String(minutes))
         timerText.text = hoursStr + ":" + minutesStr + ":" + secStr
     }
     

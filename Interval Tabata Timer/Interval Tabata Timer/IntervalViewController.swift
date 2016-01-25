@@ -23,13 +23,13 @@ var _workTimeKey = "worktime"
 var _restTimeKey = "resttime"
 
 class IntervalViewController: UIViewController {
-    var alarmSound = NSURL(fileURLWithPath: (NSBundle.mainBundle().pathForResource("alarmSound", ofType: "mp3"))!)!
-    var roundSounds = NSURL(fileURLWithPath: (NSBundle.mainBundle().pathForResource("round_sound", ofType: "mp3"))!)!
-    var delaySound = NSURL(fileURLWithPath: (NSBundle.mainBundle().pathForResource("warning_beep", ofType: "mp3"))!)!
+    var alarmSound = NSURL(fileURLWithPath: (NSBundle.mainBundle().pathForResource("alarmSound", ofType: "mp3"))!)
+    var roundSounds = NSURL(fileURLWithPath: (NSBundle.mainBundle().pathForResource("round_sound", ofType: "mp3"))!)
+    var delaySound = NSURL(fileURLWithPath: (NSBundle.mainBundle().pathForResource("warning_beep", ofType: "mp3"))!)
     
-    var finalRoundSound = NSURL(fileURLWithPath: (NSBundle.mainBundle().pathForResource("final_round", ofType: "mp3"))!)!
-    var gogoSound = NSURL(fileURLWithPath: (NSBundle.mainBundle().pathForResource("gogo", ofType: "wav"))!)!
-    var finishSound = NSURL(fileURLWithPath: (NSBundle.mainBundle().pathForResource("outstanding", ofType: "mp3"))!)!
+    var finalRoundSound = NSURL(fileURLWithPath: (NSBundle.mainBundle().pathForResource("final_round", ofType: "mp3"))!)
+    var gogoSound = NSURL(fileURLWithPath: (NSBundle.mainBundle().pathForResource("gogo", ofType: "wav"))!)
+    var finishSound = NSURL(fileURLWithPath: (NSBundle.mainBundle().pathForResource("outstanding", ofType: "mp3"))!)
     
     
     var audioPlayer = AVAudioPlayer()
@@ -76,43 +76,43 @@ class IntervalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         delayTime = _delayTime
-        var defaults = NSUserDefaults.standardUserDefaults()
+        let defaults = NSUserDefaults.standardUserDefaults()
         if(defaults.valueForKey(_delayKey) != nil) {
-            _delayTime = defaults.valueForKey(_delayKey) as NSInteger!
+            _delayTime = defaults.valueForKey(_delayKey) as! NSInteger!
         }
         if(defaults.valueForKey(_soundKey) != nil) {
-            _soundIsOn = defaults.valueForKey(_soundKey) as Bool!
+            _soundIsOn = defaults.valueForKey(_soundKey) as! Bool!
         }
         if(defaults.valueForKey(_vibrateKey) != nil) {
-            _vibratorOn = defaults.valueForKey(_vibrateKey) as Bool!
+            _vibratorOn = defaults.valueForKey(_vibrateKey) as! Bool!
         }
         if(defaults.valueForKey(_soundEffectKey) != nil) {
-            _soundEffect = defaults.valueForKey(_soundEffectKey) as Bool!
+            _soundEffect = defaults.valueForKey(_soundEffectKey) as! Bool!
         }
         if(defaults.valueForKey(_workTimeKey) != nil) {
-            workTimeValues = defaults.valueForKey(_workTimeKey) as [Int]
+            workTimeValues = defaults.valueForKey(_workTimeKey) as! [Int]
         }
         if(defaults.valueForKey(_restTimeKey) != nil) {
-            restTimeValues = defaults.valueForKey(_restTimeKey) as [Int]
+            restTimeValues = defaults.valueForKey(_restTimeKey) as! [Int]
         }
         if(defaults.valueForKey(_roundKey) != nil) {
-            roundValue = defaults.valueForKey(_roundKey) as [Int]
+            roundValue = defaults.valueForKey(_roundKey) as! [Int]
         }
-        audioPlayer = AVAudioPlayer(contentsOfURL: alarmSound, error: nil)
+        audioPlayer = try! AVAudioPlayer(contentsOfURL: alarmSound);
         audioPlayer.prepareToPlay()
         
-        audioPlayerRound = AVAudioPlayer(contentsOfURL: roundSounds, error: nil)
+        audioPlayerRound = try! AVAudioPlayer(contentsOfURL: roundSounds)
         audioPlayerRound.prepareToPlay()
         
         //audioPlayerstartSound = AVAudioPlayer(contentsOfURL: startSound, error: nil)
         //audioPlayerstartSound.prepareToPlay()
-        audioPlayerDelay = AVAudioPlayer(contentsOfURL: delaySound, error: nil)
+        audioPlayerDelay = try! AVAudioPlayer(contentsOfURL: delaySound)
         audioPlayerDelay.prepareToPlay()
-        audiPlayerFinalRound = AVAudioPlayer(contentsOfURL: finalRoundSound, error: nil)
+        audiPlayerFinalRound = try! AVAudioPlayer(contentsOfURL: finalRoundSound)
         audiPlayerFinalRound.prepareToPlay()
-        audioPlayerGoGo = AVAudioPlayer(contentsOfURL: gogoSound, error: nil)
+        audioPlayerGoGo = try! AVAudioPlayer(contentsOfURL: gogoSound)
         audioPlayerGoGo.prepareToPlay()
-        audioPlayerFinish = AVAudioPlayer(contentsOfURL: finishSound, error: nil)
+        audioPlayerFinish = try! AVAudioPlayer(contentsOfURL: finishSound)
         audioPlayerFinish.prepareToPlay()
       
         
@@ -143,6 +143,10 @@ class IntervalViewController: UIViewController {
         restTimeToolBar.setItems(restTimeToolbarButtons, animated: true)
         resetValuesFromPicker();
 
+        
+        //set colors
+        self.view.backgroundColor = UIColor(red: 255, green: 0, blue: 255, alpha: 255);
+    
         
     }
     
@@ -175,7 +179,7 @@ class IntervalViewController: UIViewController {
         delayText.text = String(delayTime)
         
         //store value to phone
-        var defaults = NSUserDefaults.standardUserDefaults()
+        let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setValue(workTimeValues, forKey: _workTimeKey)
         defaults.synchronize()
         defaults.setValue(restTimeValues, forKey: _restTimeKey)
@@ -241,9 +245,9 @@ class IntervalViewController: UIViewController {
         if(_vibratorOn) {
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         }
-        var title = "Timer"
-        var message = "Time is up"
-        var alert:UIAlertView = UIAlertView()
+        let title = "Timer"
+        let message = "Time is up"
+        let alert:UIAlertView = UIAlertView()
         alert.title = title
         alert.delegate = self
         alert.message = message
@@ -312,7 +316,7 @@ class IntervalViewController: UIViewController {
                 currentRoundText.text = "Round: " + String(currentRoundValue) + "/" + String(roundValue[0])
             }
             if((currentRoundValue-1) == roundPicker.getTimerValues()[0]) {
-                var realValue = String(currentRoundValue-1)
+                let realValue = String(currentRoundValue-1)
                 currentRoundText.text = "Round: " + realValue + "/" + String(roundPicker.getTimerValues()[0])
                 timer.invalidate()
                 showAlert()

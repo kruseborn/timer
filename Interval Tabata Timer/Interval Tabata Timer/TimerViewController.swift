@@ -25,7 +25,12 @@ class TimerViewController: UIViewController {
         
         let fileURL = NSURL(fileURLWithPath: filePath!)
         var error : NSError?
-        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error: &error)
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOfURL: fileURL)
+        } catch let error1 as NSError {
+            error = error1
+            audioPlayer = nil
+        }
 
         audioPlayer.prepareToPlay()
         
@@ -34,8 +39,8 @@ class TimerViewController: UIViewController {
         timerPicker.dataSource = timerPicker;
         timerPicker.initialize(timerText, initValues : timerValues, valuesPerComponent : [60,60,60], addPrefix : true)
         
-        var barButton = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: "doneButton:")
-        var toolbarButtons = [barButton];
+        let barButton = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: "doneButton:")
+        let toolbarButtons = [barButton];
         doneToolbar.setItems(toolbarButtons, animated: true)
         //doneToolbar.backgroundColor = UIColor(white: 0.5, alpha: 1.0)
     }
@@ -92,9 +97,9 @@ class TimerViewController: UIViewController {
         if(_vibratorOn) {
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         }
-        var title = "Timer"
-        var message = "Time is up"
-        var alert:UIAlertView = UIAlertView()
+        let title = "Timer"
+        let message = "Time is up"
+        let alert:UIAlertView = UIAlertView()
         alert.title = title
         alert.message = message
         alert.addButtonWithTitle("ok")

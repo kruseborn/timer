@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NlI-mO-A98">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NlI-mO-A98">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--Stopwatch View Controller-->
@@ -67,7 +68,7 @@
                     <navigationItem key="navigationItem" id="423-iX-iPy">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="60e-qM-CIt">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Sel-iw-SX9">
-                                <rect key="frame" x="-23" y="-15" width="92" height="30"/>
+                                <rect key="frame" x="20" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Settings">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -108,7 +109,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ecO-ya-CwK"/>
                                     <barButtonItem style="plain" id="CTl-zO-UBI">
                                         <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="cLy-hZ-AI4">
-                                            <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                            <rect key="frame" x="345" y="7" width="51" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <connections>
                                                 <action selector="SoundSwitchAction:" destination="kV0-ej-Fh2" eventType="valueChanged" id="6aP-HK-u9h"/>
@@ -126,7 +127,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="YlD-Dj-TPI"/>
                                     <barButtonItem style="plain" id="MUJ-Gv-HCt">
                                         <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="Oo6-zu-4wc">
-                                            <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                            <rect key="frame" x="345" y="7" width="51" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <connections>
                                                 <action selector="soundEffectAction:" destination="kV0-ej-Fh2" eventType="valueChanged" id="Jrx-Zk-2X4"/>
@@ -144,7 +145,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="fu8-n1-W7X"/>
                                     <barButtonItem style="plain" id="TOm-UW-C6s">
                                         <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="1gI-AD-nYR">
-                                            <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                            <rect key="frame" x="297" y="7" width="97" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -164,12 +165,35 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="CHp-cA-Rp6"/>
                                     <barButtonItem style="plain" id="7Oy-nS-zUS">
                                         <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="tUf-SJ-b4a">
-                                            <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                            <rect key="frame" x="345" y="7" width="51" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <connections>
                                                 <action selector="vibratorAction:" destination="kV0-ej-Fh2" eventType="valueChanged" id="Pzo-9c-SN4"/>
                                             </connections>
                                         </switch>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qfw-Fr-2Aq" userLabel="Theme">
+                                <rect key="frame" x="0.0" y="248" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem title="Theme" id="g4F-NN-skY">
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JMK-hF-PgX"/>
+                                    <barButtonItem style="plain" id="x1A-YL-rUu">
+                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="White" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="f3l-Jw-3sn">
+                                            <rect key="frame" x="297" y="7" width="97" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="themeButton:" destination="kV0-ej-Fh2" eventType="touchDown" id="NuY-KU-5Dx"/>
+                                            </connections>
+                                        </textField>
+                                        <connections>
+                                            <action selector="ThemeButton:" destination="kV0-ej-Fh2" id="nKu-jS-x7N"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
@@ -198,6 +222,7 @@
                         <outlet property="delayTime" destination="wrh-Oe-GqG" id="fxG-hG-GEf"/>
                         <outlet property="soundEffectSwitch" destination="Oo6-zu-4wc" id="P4X-Gv-E9n"/>
                         <outlet property="soundOnOrOff" destination="cLy-hZ-AI4" id="51q-aq-yzC"/>
+                        <outlet property="themeText" destination="f3l-Jw-3sn" id="6Qf-ke-gyK"/>
                         <outlet property="vibratorOnOrOff" destination="tUf-SJ-b4a" id="TUu-0y-B6L"/>
                     </connections>
                 </viewController>
@@ -267,7 +292,7 @@
                     <navigationItem key="navigationItem" id="011-fo-Y4s">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="ocM-Z4-QCo">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Tt6-y6-tFP">
-                                <rect key="frame" x="-23" y="-15" width="92" height="30"/>
+                                <rect key="frame" x="20" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Settings">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -299,8 +324,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="6MP-zo-Wrt" userLabel="roundToolbar">
+                            <toolbar clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="6MP-zo-Wrt" userLabel="roundToolbar">
                                 <rect key="frame" x="0.0" y="72" width="414" height="44"/>
+                                <color key="backgroundColor" red="0.26843179274443674" green="1" blue="0.078769544744538456" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <barButtonItem title="Rounds" id="fEW-7k-LKF">
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -308,7 +334,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="KYM-Xk-LIt"/>
                                     <barButtonItem style="plain" id="b2X-hM-Zko">
                                         <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="8" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="oyH-ZA-3tm">
-                                            <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                            <rect key="frame" x="297" y="7" width="97" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -319,6 +345,8 @@
                                         </textField>
                                     </barButtonItem>
                                 </items>
+                                <color key="tintColor" red="0.041302290215018189" green="0.067651101620426313" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="kX7-Q7-dAA" userLabel="workTimeToolbar">
                                 <rect key="frame" x="0.0" y="116" width="414" height="44"/>
@@ -329,7 +357,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Oqm-oy-TYI"/>
                                     <barButtonItem style="plain" id="vvW-jB-DU7">
                                         <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00:00:20" borderStyle="roundedRect" minimumFontSize="17" id="GsQ-b6-9YR">
-                                            <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                            <rect key="frame" x="297" y="7" width="97" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -358,32 +386,6 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="00:00:00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IUx-fG-FYj">
-                                <rect key="frame" x="57" y="328" width="310" height="68"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="78" id="g40-mf-Tu6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="85"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="g40-mf-Tu6"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="85"/>
-                                    <rect key="frame" x="-26" y="356" width="466" height="64"/>
-                                    <mask key="constraints">
-                                        <include reference="g40-mf-Tu6"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" type="system" pointSize="200"/>
-                                </variation>
-                            </textField>
                             <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="spO-nn-Lp6" userLabel="restTimeToolbar">
                                 <rect key="frame" x="0.0" y="160" width="414" height="44"/>
                                 <items>
@@ -393,7 +395,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="UBQ-iP-Cj3"/>
                                     <barButtonItem style="plain" id="Taw-kf-yuY">
                                         <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00:00:10" borderStyle="roundedRect" minimumFontSize="17" id="Ac0-lK-wer">
-                                            <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                            <rect key="frame" x="297" y="7" width="97" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -420,6 +422,32 @@
                                 <rect key="frame" x="118" y="353" width="188" height="138"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="200"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="00:00:00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IUx-fG-FYj">
+                                <rect key="frame" x="57" y="328" width="310" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="g40-mf-Tu6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="85"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="g40-mf-Tu6"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="85"/>
+                                    <rect key="frame" x="-26" y="356" width="466" height="64"/>
+                                    <mask key="constraints">
+                                        <include reference="g40-mf-Tu6"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <fontDescription key="fontDescription" type="system" pointSize="200"/>
                                 </variation>
@@ -454,7 +482,7 @@
                     <navigationItem key="navigationItem" id="Glj-0j-B23">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="bU1-3m-wO4">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uWX-k9-7ri">
-                                <rect key="frame" x="-23" y="-15" width="92" height="30"/>
+                                <rect key="frame" x="20" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Settings">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
