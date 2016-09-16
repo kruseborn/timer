@@ -143,9 +143,9 @@ class IntervalViewController: UIViewController {
         restTimeToolBar.setItems(restTimeToolbarButtons, animated: true)
         resetValuesFromPicker();
 
-        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
         //set colors
-        self.view.backgroundColor = UIColor(red: 255, green: 0, blue: 255, alpha: 255);
+        //self.view.backgroundColor = UIColor(red: 255, green: 0, blue: 255, alpha: 255);
     
         
     }

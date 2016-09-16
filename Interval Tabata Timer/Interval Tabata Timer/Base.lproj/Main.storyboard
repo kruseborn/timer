@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NlI-mO-A98">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NlI-mO-A98">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -329,7 +329,7 @@
                                 <color key="backgroundColor" red="0.26843179274443674" green="1" blue="0.078769544744538456" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <barButtonItem title="Rounds" id="fEW-7k-LKF">
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="KYM-Xk-LIt"/>
                                     <barButtonItem style="plain" id="b2X-hM-Zko">
@@ -352,7 +352,7 @@
                                 <rect key="frame" x="0.0" y="116" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="Work time" id="mZ6-80-r6j">
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Oqm-oy-TYI"/>
                                     <barButtonItem style="plain" id="vvW-jB-DU7">
@@ -367,30 +367,32 @@
                                         </textField>
                                     </barButtonItem>
                                 </items>
+                                <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xK-ng-52G" userLabel="bottomToolbar">
                                 <rect key="frame" x="0.0" y="643" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="Start" id="0Sp-5g-JGl">
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.97829861111111116" green="0.97829861111111116" blue="0.97829861111111116" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="StartAndPauseAction:" destination="Kup-Zq-LKR" id="DUf-dr-U42"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="MT9-Gt-Gz0"/>
                                     <barButtonItem title="Reset" id="4Ur-q1-lXm">
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="ResetAction:" destination="Kup-Zq-LKR" id="Wlc-fb-L70"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
+                                <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="spO-nn-Lp6" userLabel="restTimeToolbar">
                                 <rect key="frame" x="0.0" y="160" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="Rest time" id="tRl-9k-rXT">
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.99909248737373735" green="0.99909248737373735" blue="0.99909248737373735" alpha="1" colorSpace="calibratedRGB"/>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="UBQ-iP-Cj3"/>
                                     <barButtonItem style="plain" id="Taw-kf-yuY">
@@ -405,9 +407,11 @@
                                         </textField>
                                     </barButtonItem>
                                 </items>
+                                <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Round 1/8" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xxk-dj-DKA">
                                 <rect key="frame" x="164" y="404" width="97" height="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" misplaced="YES">
@@ -420,6 +424,7 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y7N-rh-8u0">
                                 <rect key="frame" x="118" y="353" width="188" height="138"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=regular">
@@ -431,6 +436,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="78" id="g40-mf-Tu6"/>
                                 </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="85"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="default">
@@ -453,7 +459,7 @@
                                 </variation>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.40000000000000002" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="spO-nn-Lp6" firstAttribute="leading" secondItem="2yZ-x9-nKF" secondAttribute="leading" id="0Qc-eh-9MD"/>
                             <constraint firstAttribute="centerX" secondItem="IUx-fG-FYj" secondAttribute="centerX" id="71s-6n-vb6"/>

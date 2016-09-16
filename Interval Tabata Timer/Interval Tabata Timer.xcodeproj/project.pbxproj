@@ -24,6 +24,7 @@
 		16D796A91AE3C6770094FDC4 /* gogo.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16D796A41AE3C6770094FDC4 /* gogo.wav */; };
 		16D796AA1AE3C6770094FDC4 /* outstanding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16D796A51AE3C6770094FDC4 /* outstanding.mp3 */; };
 		16D796AB1AE3C6770094FDC4 /* warning_beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16D796A61AE3C6770094FDC4 /* warning_beep.mp3 */; };
+		16F76B461C56ADBB00F05ED5 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 16F76B451C56ADBB00F05ED5 /* background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		16D796A41AE3C6770094FDC4 /* gogo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = gogo.wav; path = "Interval Tabata Timer/gogo.wav"; sourceTree = "<group>"; };
 		16D796A51AE3C6770094FDC4 /* outstanding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = outstanding.mp3; path = "Interval Tabata Timer/outstanding.mp3"; sourceTree = "<group>"; };
 		16D796A61AE3C6770094FDC4 /* warning_beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = warning_beep.mp3; path = "Interval Tabata Timer/warning_beep.mp3"; sourceTree = "<group>"; };
+		16F76B451C56ADBB00F05ED5 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		1666D5B31AA4C1EF000FF75F /* resourses */ = {
 			isa = PBXGroup;
 			children = (
+				16F76B451C56ADBB00F05ED5 /* background.png */,
 				16242D141AE425E600AF5B7C /* round_sound.mp3 */,
 				16D796A31AE3C6770094FDC4 /* final_round.mp3 */,
 				16D796A41AE3C6770094FDC4 /* gogo.wav */,
@@ -237,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16242D151AE425E600AF5B7C /* round_sound.mp3 in Resources */,
+				16F76B461C56ADBB00F05ED5 /* background.png in Resources */,
 				169808A81AA1CF1400F7DF71 /* Main.storyboard in Resources */,
 				169808AD1AA1CF1400F7DF71 /* LaunchScreen.xib in Resources */,
 				16D796AA1AE3C6770094FDC4 /* outstanding.mp3 in Resources */,
