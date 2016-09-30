@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -405,31 +406,21 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Round 1/8" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xxk-dj-DKA">
-                                <frame key="frameInset" minX="139" minY="404" width="97" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Round 1/8" textAlignment="center" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="xxk-dj-DKA">
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" type="system" pointSize="66"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="73"/>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="00:00:00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IUx-fG-FYj">
-                                <frame key="frameInset" minX="32" minY="328" width="310" height="68"/>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="00:00:00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IUx-fG-FYj">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="78" id="g40-mf-Tu6"/>
+                                    <constraint firstAttribute="height" constant="68" id="HVb-ib-MUD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="85"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="g40-mf-Tu6"/>
-                                    </mask>
-                                </variation>
                                 <variation key="widthClass=compact">
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="85"/>
-                                    <mask key="constraints">
-                                        <include reference="g40-mf-Tu6"/>
-                                    </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="80"/>
@@ -438,8 +429,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="200"/>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y7N-rh-8u0">
-                                <frame key="frameInset" minX="93" minY="376" width="188" height="138"/>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y7N-rh-8u0">
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=regular">
@@ -450,26 +440,27 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="spO-nn-Lp6" firstAttribute="leading" secondItem="2yZ-x9-nKF" secondAttribute="leading" id="0Qc-eh-9MD"/>
-                            <constraint firstAttribute="centerX" secondItem="IUx-fG-FYj" secondAttribute="centerX" id="71s-6n-vb6"/>
-                            <constraint firstAttribute="centerX" secondItem="Y7N-rh-8u0" secondAttribute="centerX" id="JQK-bZ-75m"/>
+                            <constraint firstItem="IUx-fG-FYj" firstAttribute="top" secondItem="2yZ-x9-nKF" secondAttribute="top" constant="328" id="0nR-Te-jJi"/>
+                            <constraint firstItem="Uj5-s7-egY" firstAttribute="top" secondItem="xxk-dj-DKA" secondAttribute="bottom" constant="133" id="83X-Nd-fBF"/>
+                            <constraint firstItem="IUx-fG-FYj" firstAttribute="centerX" secondItem="2yZ-x9-nKF" secondAttribute="centerX" id="Eon-qr-ipn"/>
                             <constraint firstAttribute="trailing" secondItem="kX7-Q7-dAA" secondAttribute="trailing" id="OuH-vE-LgF"/>
+                            <constraint firstItem="Uj5-s7-egY" firstAttribute="top" secondItem="Y7N-rh-8u0" secondAttribute="bottom" constant="76" id="PAQ-p6-caT"/>
+                            <constraint firstItem="Y7N-rh-8u0" firstAttribute="leading" secondItem="2yZ-x9-nKF" secondAttribute="leadingMargin" constant="77" id="Ss6-wg-He9"/>
                             <constraint firstAttribute="trailing" secondItem="spO-nn-Lp6" secondAttribute="trailing" id="SuH-qY-12U"/>
+                            <constraint firstItem="IUx-fG-FYj" firstAttribute="leading" secondItem="2yZ-x9-nKF" secondAttribute="leadingMargin" constant="16" id="Twq-iM-SWP"/>
+                            <constraint firstItem="xxk-dj-DKA" firstAttribute="centerX" secondItem="Y7N-rh-8u0" secondAttribute="centerX" id="XpB-DZ-rag"/>
+                            <constraint firstItem="xxk-dj-DKA" firstAttribute="leading" secondItem="2yZ-x9-nKF" secondAttribute="leadingMargin" constant="70" id="Z3g-Tq-eIq"/>
                             <constraint firstItem="kX7-Q7-dAA" firstAttribute="top" secondItem="6MP-zo-Wrt" secondAttribute="bottom" id="ZG7-rL-4By"/>
-                            <constraint firstAttribute="centerY" secondItem="Y7N-rh-8u0" secondAttribute="centerY" id="ZQO-Kp-Y0g"/>
-                            <constraint firstItem="xxk-dj-DKA" firstAttribute="centerX" secondItem="IUx-fG-FYj" secondAttribute="centerX" constant="0.5" id="ahX-lZ-Ox0"/>
+                            <constraint firstItem="xxk-dj-DKA" firstAttribute="centerX" secondItem="IUx-fG-FYj" secondAttribute="centerX" id="aKm-QJ-l4b"/>
                             <constraint firstItem="Uj5-s7-egY" firstAttribute="top" secondItem="4xK-ng-52G" secondAttribute="bottom" id="cXK-fS-cbt"/>
                             <constraint firstItem="spO-nn-Lp6" firstAttribute="top" secondItem="kX7-Q7-dAA" secondAttribute="bottom" id="d3t-KX-mnO"/>
                             <constraint firstItem="4xK-ng-52G" firstAttribute="leading" secondItem="2yZ-x9-nKF" secondAttribute="leading" id="dXE-3f-YhW"/>
+                            <constraint firstItem="xxk-dj-DKA" firstAttribute="top" secondItem="IUx-fG-FYj" secondAttribute="bottom" constant="8" symbolic="YES" id="eI9-qq-MEM"/>
                             <constraint firstItem="6MP-zo-Wrt" firstAttribute="leading" secondItem="2yZ-x9-nKF" secondAttribute="leading" id="gKg-lV-IZ5"/>
-                            <constraint firstAttribute="centerY" secondItem="IUx-fG-FYj" secondAttribute="centerY" id="hbg-Rk-MOT">
-                                <variation key="widthClass=compact" constant="-25"/>
-                            </constraint>
                             <constraint firstAttribute="trailing" secondItem="4xK-ng-52G" secondAttribute="trailing" id="hep-DX-0ZK"/>
-                            <constraint firstItem="xxk-dj-DKA" firstAttribute="top" secondItem="IUx-fG-FYj" secondAttribute="bottom" id="pEi-Yp-sIN">
-                                <variation key="widthClass=compact" constant="15"/>
-                            </constraint>
                             <constraint firstItem="kX7-Q7-dAA" firstAttribute="leading" secondItem="2yZ-x9-nKF" secondAttribute="leading" id="qb2-UK-rnI"/>
                             <constraint firstItem="6MP-zo-Wrt" firstAttribute="centerX" secondItem="4xK-ng-52G" secondAttribute="centerX" id="rBy-8l-p83"/>
+                            <constraint firstItem="xxk-dj-DKA" firstAttribute="top" secondItem="Y7N-rh-8u0" secondAttribute="top" id="v6o-8e-GhE"/>
                             <constraint firstItem="6MP-zo-Wrt" firstAttribute="top" secondItem="cyX-YB-xbf" secondAttribute="bottom" constant="8" id="wmg-so-UUK"/>
                         </constraints>
                     </view>
@@ -500,7 +491,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jvq-Pr-XZL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6" y="-1145"/>
+            <point key="canvasLocation" x="-6.5" y="-1145.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="B28-fV-GaH">
