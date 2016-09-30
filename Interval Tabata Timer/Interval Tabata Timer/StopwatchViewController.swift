@@ -18,7 +18,7 @@ class StopwatchViewController: UIViewController {
     var ms = 0
     var seconds = 0
     var minutes = 0
-    var timer = NSTimer()
+    var timer = Timer()
     
     override func viewDidLoad() {
 
@@ -30,37 +30,37 @@ class StopwatchViewController: UIViewController {
     }
     
     
-    @IBAction func ResetTimer(sender: AnyObject) {
+    @IBAction func ResetTimer(_ sender: AnyObject) {
         ms = 0
         seconds = 0
         minutes = 0
         timer.invalidate()
         timerText.text = "00:00:00"
         startAndPuseButton.title = "Start"
-        UIApplication.sharedApplication().idleTimerDisabled = false
+        UIApplication.shared.isIdleTimerDisabled = false
     }
     
-    @IBAction func startTimer(sender: UIBarButtonItem) {
+    @IBAction func startTimer(_ sender: UIBarButtonItem) {
         if(startAndPuseButton.title == "Start") {
-            timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(StopwatchViewController.updateTimer), userInfo: nil, repeats: true)
             startAndPuseButton.title = "Stop"
-            UIApplication.sharedApplication().idleTimerDisabled = true
+            UIApplication.shared.isIdleTimerDisabled = true
         }
         else {
             startAndPuseButton.title = "Start"
-            UIApplication.sharedApplication().idleTimerDisabled = false
+            UIApplication.shared.isIdleTimerDisabled = false
             timer.invalidate()
         }
     }
     func updateTimer() {
-        ms++
+        ms += 1
         if(ms == 100) {
             ms = 0
-            seconds++;
+            seconds += 1;
         }
         if(seconds == 60) {
             seconds = 0
-            minutes++
+            minutes += 1
         }
         let secStr = (ms < 10 ? "0" + String(ms) : String(ms))
         let minutesStr = (seconds < 10 ?  "0" + String(seconds) : String(seconds))

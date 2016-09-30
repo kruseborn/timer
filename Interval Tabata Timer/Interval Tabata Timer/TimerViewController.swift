@@ -16,17 +16,17 @@ class TimerViewController: UIViewController {
     let timerPicker  : TimerPicker = TimerPicker()
     @IBOutlet weak var timerText: UITextField!
     var timerValues = [0,0,0]
-    let doneToolbar = UIToolbar(frame: CGRectMake(0, 0, 100, 50))
-    var timer = NSTimer()
+    let doneToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
+    var timer = Timer()
     @IBOutlet weak var startAndPauseButton: UIBarButtonItem!
     
     override func viewDidLoad() {
-        let filePath = NSBundle.mainBundle().pathForResource("alarmSound", ofType: "mp3")
+        let filePath = Bundle.main.path(forResource: "alarmSound", ofType: "mp3")
         
-        let fileURL = NSURL(fileURLWithPath: filePath!)
+        let fileURL = URL(fileURLWithPath: filePath!)
         var error : NSError?
         do {
-            audioPlayer = try AVAudioPlayer(contentsOfURL: fileURL)
+            audioPlayer = try AVAudioPlayer(contentsOf: fileURL)
         } catch let error1 as NSError {
             error = error1
             audioPlayer = nil
@@ -39,7 +39,7 @@ class TimerViewController: UIViewController {
         timerPicker.dataSource = timerPicker;
         timerPicker.initialize(timerText, initValues : timerValues, valuesPerComponent : [60,60,60], addPrefix : true)
         
-        let barButton = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: "doneButton:")
+        let barButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(TimerViewController.doneButton(_:)))
         let toolbarButtons = [barButton];
         doneToolbar.setItems(toolbarButtons, animated: true)
         //doneToolbar.backgroundColor = UIColor(white: 0.5, alpha: 1.0)
@@ -51,12 +51,12 @@ class TimerViewController: UIViewController {
     }
     
     
-    @IBAction func TimerAction(sender: AnyObject) {
+    @IBAction func TimerAction(_ sender: AnyObject) {
         timerText.inputView = timerPicker
         timerText.inputAccessoryView = doneToolbar
     }
     
-    func doneButton(sender:UIBarButtonItem) {
+    func doneButton(_ sender:UIBarButtonItem) {
         timerValues = timerPicker.getTimerValues()
         timerText.resignFirstResponder() // To resign the inputView on clicking done.
         startAndPauseButton.title = "Start"
@@ -70,23 +70,23 @@ class TimerViewController: UIViewController {
         }
         timerText.text = strArray[0] + ":" + strArray[1] + ":" + strArray[2]
     }
-    @IBAction func ResetAction(sender: AnyObject) {
+    @IBAction func ResetAction(_ sender: AnyObject) {
         timerValues = timerPicker.getTimerValues()
         startAndPauseButton.title = "Start"
         timer.invalidate()
         setTimerTextValues()
-        UIApplication.sharedApplication().idleTimerDisabled = false
+        UIApplication.shared.isIdleTimerDisabled = false
     }
  
-    @IBAction func StartAndPauseAction(sender: UIBarButtonItem) {
+    @IBAction func StartAndPauseAction(_ sender: UIBarButtonItem) {
         if(startAndPauseButton.title == "Start") {
-            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(TimerViewController.updateTimer), userInfo: nil, repeats: true)
             startAndPauseButton.title = "Stop"
-            UIApplication.sharedApplication().idleTimerDisabled = true
+            UIApplication.shared.isIdleTimerDisabled = true
         }
         else {
             startAndPauseButton.title = "Start"
-            UIApplication.sharedApplication().idleTimerDisabled = false
+            UIApplication.shared.isIdleTimerDisabled = false
             timer.invalidate()
         }
     }
@@ -102,19 +102,19 @@ class TimerViewController: UIViewController {
         let alert:UIAlertView = UIAlertView()
         alert.title = title
         alert.message = message
-        alert.addButtonWithTitle("ok")
+        alert.addButton(withTitle: "ok")
         alert.show()
         
     }
     
     func updateTimer() {
-        timerValues[2]--
+        timerValues[2] -= 1
         if(timerValues[2] < 0 && timerValues[1] > 0) {
             timerValues[2] = 59
-            timerValues[1]--
+            timerValues[1] -= 1
             if(timerValues[1] < 0 && timerValues[0] > 0) {
                 timerValues[1] = 59
-                timerValues[0]--
+                timerValues[0] -= 1
             }
         }
         

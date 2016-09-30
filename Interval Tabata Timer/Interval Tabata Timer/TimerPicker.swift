@@ -10,11 +10,11 @@ import UIKit
 
 class TimerPicker : UIPickerView {
     
-    func initialize(timerText: UITextField!, initValues : [Int], valuesPerComponent : [Int], addPrefix : Bool, zeroIndex : Bool = true) {
+    func initialize(_ timerText: UITextField!, initValues : [Int], valuesPerComponent : [Int], addPrefix : Bool, zeroIndex : Bool = true) {
         _zeroIndex = zeroIndex
         _timerText = timerText
         _valueArray = initValues
-        _strArray = [String](count: initValues.count, repeatedValue: "")
+        _strArray = [String](repeating: "", count: initValues.count)
         _valuesPerComponent = valuesPerComponent
         _addPrefix = addPrefix
         for i in 0 ..< initValues.count {
@@ -27,7 +27,7 @@ class TimerPicker : UIPickerView {
         }
         setTextValues()
     }
-    func setTimerValues(values : [Int]) {
+    func setTimerValues(_ values : [Int]) {
         _valueArray = values
         for i in 0..<_valueArray.count {
             if(!_zeroIndex) {
@@ -65,22 +65,22 @@ class TimerPicker : UIPickerView {
 }
 extension TimerPicker: UIPickerViewDataSource {
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return _valueArray.count;
     }
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return _valuesPerComponent[component]
     }
 }
 extension TimerPicker: UIPickerViewDelegate {
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if(_zeroIndex == false) {
             return String(row + 1);
         }
         return String(row)
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         _valueArray[component] = row
         if(_zeroIndex == false) {
             _valueArray[component] = row + 1

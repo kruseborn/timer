@@ -10,7 +10,7 @@ import UIKit
 
 class NamePicker : UIPickerView {
     
-    func initialize(timerText: UITextField!, initValues : [String]) {
+    func initialize(_ timerText: UITextField!, initValues : [String]) {
         _strArray = initValues;
         _timerText = timerText;
         _currentValue = initValues[0];
@@ -23,19 +23,19 @@ class NamePicker : UIPickerView {
 }
 extension NamePicker: UIPickerViewDataSource {
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1;
     }
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return _strArray.count;
     }
 }
 extension NamePicker: UIPickerViewDelegate {
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return _strArray[row];
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         _timerText.text = _strArray[row];
         _currentValue = _strArray[row];
     }

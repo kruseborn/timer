@@ -14,8 +14,8 @@ class SettingViewController: UIViewController {
     var themePicker = NamePicker();
     var themeValues = ["White", "Pink", "Dark"]
     var totalDelayValues = [10]
-    let delayToolBar = UIToolbar(frame: CGRectMake(0, 0, 100, 50))
-    let themeToolBar = UIToolbar(frame: CGRectMake(0, 0, 100, 50))
+    let delayToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
+    let themeToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
     
     @IBOutlet weak var delayTime: UIToolbar!
     @IBOutlet weak var vibratorOnOrOff: UISwitch!
@@ -26,16 +26,16 @@ class SettingViewController: UIViewController {
     override func viewDidLoad() {
         delayText.text = String(_delayTime)
         let delayValue = [_delayTime]
-        soundOnOrOff.on = _soundIsOn
-        vibratorOnOrOff.on = _vibratorOn
-        soundEffectSwitch.on = _soundEffect
+        soundOnOrOff.isOn = _soundIsOn
+        vibratorOnOrOff.isOn = _vibratorOn
+        soundEffectSwitch.isOn = _soundEffect
         
         self.view.backgroundColor = globals.backgroundColor;
     
         delayPicker.delegate = delayPicker
         delayPicker.dataSource = delayPicker
         delayPicker.initialize(delayText, initValues: delayValue, valuesPerComponent: totalDelayValues, addPrefix: false)
-        let barButton = UIBarButtonItem(title: "Done", style: .Plain, target:self, action: "delayPickerDone")
+        let barButton = UIBarButtonItem(title: "Done", style: .plain, target:self, action: #selector(SettingViewController.delayPickerDone))
         let toolbarButtons = [barButton];
         delayToolBar.setItems(toolbarButtons, animated: true)
         
@@ -44,7 +44,7 @@ class SettingViewController: UIViewController {
         themePicker.delegate = themePicker
         themePicker.dataSource = themePicker
         themePicker.initialize(themeText, initValues: themeValues);
-        let barButton2 = UIBarButtonItem(title: "Done", style: .Plain, target:self, action: "themePickerDone")
+        let barButton2 = UIBarButtonItem(title: "Done", style: .plain, target:self, action: #selector(SettingViewController.themePickerDone))
         let toolbarButtons2 = [barButton2];
         themeToolBar.setItems(toolbarButtons2, animated: true)
     }
@@ -52,7 +52,7 @@ class SettingViewController: UIViewController {
     
     
     @IBOutlet weak var themeText: UITextField!
-    @IBAction func themeButton(sender: UITextField) {
+    @IBAction func themeButton(_ sender: UITextField) {
         themeText.inputView = themePicker;
         themeText.inputAccessoryView = themeToolBar;
     }
@@ -63,13 +63,13 @@ class SettingViewController: UIViewController {
     }
     
     @IBOutlet weak var delayText: UITextField!
-    @IBAction func delayAction(sender: AnyObject) {
+    @IBAction func delayAction(_ sender: AnyObject) {
         delayText.inputView = delayPicker
         delayText.inputAccessoryView = delayToolBar
     }
     func delayPickerDone() {
         _delayTime = delayPicker.getTimerValues()[0]
-        let delayTimeDefault = NSUserDefaults.standardUserDefaults()
+        let delayTimeDefault = UserDefaults.standard
         delayTimeDefault.setValue(_delayTime, forKey: _delayKey)
         delayTimeDefault.synchronize()
         
@@ -84,22 +84,22 @@ class SettingViewController: UIViewController {
     }
   
     
-    @IBAction func soundEffectAction(sender: UISwitch) {
+    @IBAction func soundEffectAction(_ sender: UISwitch) {
         _soundEffect = !_soundEffect;
-        let soundEffectDefault = NSUserDefaults.standardUserDefaults()
+        let soundEffectDefault = UserDefaults.standard
         soundEffectDefault.setValue(_soundEffect, forKey: _soundEffectKey)
         soundEffectDefault.synchronize()
     }
     
-    @IBAction func SoundSwitchAction(sender: UISwitch) {
+    @IBAction func SoundSwitchAction(_ sender: UISwitch) {
         _soundIsOn = !_soundIsOn
-        let soundTimeDefault = NSUserDefaults.standardUserDefaults()
+        let soundTimeDefault = UserDefaults.standard
         soundTimeDefault.setValue(_soundIsOn, forKey: _soundKey)
         soundTimeDefault.synchronize()
     }
-    @IBAction func vibratorAction(sender: UISwitch) {
+    @IBAction func vibratorAction(_ sender: UISwitch) {
         _vibratorOn = !_vibratorOn
-        let vibrateTimeDefault = NSUserDefaults.standardUserDefaults()
+        let vibrateTimeDefault = UserDefaults.standard
         vibrateTimeDefault.setValue(_vibratorOn, forKey: _vibrateKey)
         vibrateTimeDefault.synchronize()
     }

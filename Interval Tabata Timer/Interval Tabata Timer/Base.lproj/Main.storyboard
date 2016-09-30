@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NlI-mO-A98">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NlI-mO-A98">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Stopwatch View Controller-->
@@ -14,21 +15,21 @@
                         <viewControllerLayoutGuide type="bottom" id="z8w-oW-gqI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eaS-DC-omE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FSR-GU-zcn" userLabel="buttonToolbar">
-                                <rect key="frame" x="0.0" y="643" width="414" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FSR-GU-zcn" userLabel="buttonToolbar">
+                                <frame key="frameInset" minY="643" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="Start" id="Rpi-pr-hUP">
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="startTimer:" destination="19i-14-ZZ8" id="xVx-xB-T2j"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="huJ-bw-z81"/>
                                     <barButtonItem title="Reset" id="scC-AL-6d4">
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="ResetTimer:" destination="19i-14-ZZ8" id="UgZ-VC-bVs"/>
                                         </connections>
@@ -36,7 +37,7 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="00:00:00" textAlignment="center" minimumFontSize="84" translatesAutoresizingMaskIntoConstraints="NO" id="rlh-sa-heC">
-                                <rect key="frame" x="15" y="249" width="385" height="119"/>
+                                <frame key="frameInset" minX="15" minY="249" width="385" height="119"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="127" id="7hC-EB-5Le"/>
                                 </constraints>
@@ -47,16 +48,15 @@
                                         <exclude reference="7hC-EB-5Le"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                <variation key="heightClass=regular-widthClass=regular">
                                     <fontDescription key="fontDescription" type="system" pointSize="180"/>
-                                    <rect key="frame" x="12" y="239" width="392" height="140"/>
                                 </variation>
                                 <connections>
                                     <action selector="TimerAction:" destination="19i-14-ZZ8" eventType="touchDown" id="5OS-9V-UOc"/>
                                 </connections>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="rlh-sa-heC" secondAttribute="centerY" constant="20" id="8CM-98-V5E"/>
                             <constraint firstItem="z8w-oW-gqI" firstAttribute="top" secondItem="FSR-GU-zcn" secondAttribute="bottom" id="Fgq-YF-HGx"/>
@@ -68,10 +68,10 @@
                     <navigationItem key="navigationItem" id="423-iX-iPy">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="60e-qM-CIt">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Sel-iw-SX9">
-                                <rect key="frame" x="20" y="7" width="92" height="30"/>
+                                <rect key="frame" x="16" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Settings">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="kV0-ej-Fh2" kind="show" id="hFe-ol-7zc"/>
@@ -97,19 +97,19 @@
                         <viewControllerLayoutGuide type="bottom" id="b8E-wr-0AZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9uP-2v-WDh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybY-dn-5Sz">
-                                <rect key="frame" x="0.0" y="72" width="414" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ybY-dn-5Sz">
+                                <frame key="frameInset" minY="72" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="Sound" id="F5i-cz-2dT">
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ecO-ya-CwK"/>
                                     <barButtonItem style="plain" id="CTl-zO-UBI">
                                         <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="cLy-hZ-AI4">
-                                            <rect key="frame" x="345" y="7" width="51" height="31"/>
+                                            <rect key="frame" x="345" y="6.5" width="51" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <connections>
                                                 <action selector="SoundSwitchAction:" destination="kV0-ej-Fh2" eventType="valueChanged" id="6aP-HK-u9h"/>
@@ -118,16 +118,16 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KPm-AP-v3a">
-                                <rect key="frame" x="0.0" y="160" width="414" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KPm-AP-v3a">
+                                <frame key="frameInset" minY="160" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="Sound effects" id="YgB-fu-HlO">
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="YlD-Dj-TPI"/>
                                     <barButtonItem style="plain" id="MUJ-Gv-HCt">
                                         <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="Oo6-zu-4wc">
-                                            <rect key="frame" x="345" y="7" width="51" height="31"/>
+                                            <rect key="frame" x="345" y="6.5" width="51" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <connections>
                                                 <action selector="soundEffectAction:" destination="kV0-ej-Fh2" eventType="valueChanged" id="Jrx-Zk-2X4"/>
@@ -136,11 +136,11 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wrh-Oe-GqG">
-                                <rect key="frame" x="0.0" y="204" width="414" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wrh-Oe-GqG">
+                                <frame key="frameInset" minY="204" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="Delayed Start" id="GR3-ap-UJw">
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="fu8-n1-W7X"/>
                                     <barButtonItem style="plain" id="TOm-UW-C6s">
@@ -156,16 +156,16 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5b-qO-kaP">
-                                <rect key="frame" x="0.0" y="116" width="414" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q5b-qO-kaP">
+                                <frame key="frameInset" minY="116" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="Vibrator" id="mRI-Qn-oNG">
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="CHp-cA-Rp6"/>
                                     <barButtonItem style="plain" id="7Oy-nS-zUS">
                                         <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="tUf-SJ-b4a">
-                                            <rect key="frame" x="345" y="7" width="51" height="31"/>
+                                            <rect key="frame" x="345" y="6.5" width="51" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <connections>
                                                 <action selector="vibratorAction:" destination="kV0-ej-Fh2" eventType="valueChanged" id="Pzo-9c-SN4"/>
@@ -175,10 +175,11 @@
                                 </items>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qfw-Fr-2Aq" userLabel="Theme">
-                                <rect key="frame" x="0.0" y="248" width="414" height="44"/>
+                                <frame key="frameInset" minY="248" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <barButtonItem title="Theme" id="g4F-NN-skY">
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="JMK-hF-PgX"/>
                                     <barButtonItem style="plain" id="x1A-YL-rUu">
@@ -198,7 +199,7 @@
                                 </items>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="q5b-qO-kaP" secondAttribute="trailing" id="FJG-IX-Eqj"/>
                             <constraint firstItem="ybY-dn-5Sz" firstAttribute="top" secondItem="bs9-ej-Bm2" secondAttribute="bottom" constant="8" id="GEQ-9C-jgk"/>
@@ -228,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ni1-zZ-6vH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="474" y="-212"/>
+            <point key="canvasLocation" x="472.80000000000001" y="-212.74362818590706"/>
         </scene>
         <!--Timer View Controller-->
         <scene sceneID="ffo-Jn-dB7">
@@ -239,21 +240,21 @@
                         <viewControllerLayoutGuide type="bottom" id="g20-uD-6cY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kOT-4o-ciN" userLabel="Timer View Controller">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eaw-bi-ccj" userLabel="buttonToolbar">
-                                <rect key="frame" x="0.0" y="643" width="414" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eaw-bi-ccj" userLabel="buttonToolbar">
+                                <frame key="frameInset" minY="643" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="Start" id="1nm-mH-28f">
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="StartAndPauseAction:" destination="9gm-1w-gql" id="6mM-qY-lXC"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="lkY-EO-yZN"/>
                                     <barButtonItem title="Reset" id="3Ty-h2-Nk1">
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="ResetAction:" destination="9gm-1w-gql" id="au0-4F-1vL"/>
                                         </connections>
@@ -261,7 +262,7 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00:00:00" textAlignment="center" minimumFontSize="85" translatesAutoresizingMaskIntoConstraints="NO" id="qIx-bN-umI">
-                                <rect key="frame" x="18" y="308" width="378" height="81"/>
+                                <frame key="frameInset" minX="18" minY="308" width="378" height="81"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="127" id="tNW-hR-TMf"/>
                                 </constraints>
@@ -280,7 +281,7 @@
                                 </connections>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="qIx-bN-umI" secondAttribute="centerY" constant="19.5" id="2cY-RF-3K2"/>
                             <constraint firstItem="g20-uD-6cY" firstAttribute="top" secondItem="eaw-bi-ccj" secondAttribute="bottom" id="5hT-wJ-eh0"/>
@@ -292,10 +293,10 @@
                     <navigationItem key="navigationItem" id="011-fo-Y4s">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="ocM-Z4-QCo">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Tt6-y6-tFP">
-                                <rect key="frame" x="20" y="7" width="92" height="30"/>
+                                <rect key="frame" x="16" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Settings">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="kV0-ej-Fh2" kind="show" id="nd6-Dp-anp"/>
@@ -321,15 +322,14 @@
                         <viewControllerLayoutGuide type="bottom" id="Uj5-s7-egY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2yZ-x9-nKF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="6MP-zo-Wrt" userLabel="roundToolbar">
-                                <rect key="frame" x="0.0" y="72" width="414" height="44"/>
-                                <color key="backgroundColor" red="0.26843179274443674" green="1" blue="0.078769544744538456" alpha="1" colorSpace="calibratedRGB"/>
+                            <toolbar clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6MP-zo-Wrt" userLabel="roundToolbar">
+                                <frame key="frameInset" minY="72" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="Rounds" id="fEW-7k-LKF">
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="KYM-Xk-LIt"/>
                                     <barButtonItem style="plain" id="b2X-hM-Zko">
@@ -345,14 +345,13 @@
                                         </textField>
                                     </barButtonItem>
                                 </items>
-                                <color key="tintColor" red="0.041302290215018189" green="0.067651101620426313" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.041302290215018189" green="0.067651101620426313" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
-                            <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="kX7-Q7-dAA" userLabel="workTimeToolbar">
-                                <rect key="frame" x="0.0" y="116" width="414" height="44"/>
+                            <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kX7-Q7-dAA" userLabel="workTimeToolbar">
+                                <frame key="frameInset" minY="116" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="Work time" id="mZ6-80-r6j">
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Oqm-oy-TYI"/>
                                     <barButtonItem style="plain" id="vvW-jB-DU7">
@@ -368,29 +367,29 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xK-ng-52G" userLabel="bottomToolbar">
-                                <rect key="frame" x="0.0" y="643" width="414" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4xK-ng-52G" userLabel="bottomToolbar">
+                                <frame key="frameInset" minY="643" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="Start" id="0Sp-5g-JGl">
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="StartAndPauseAction:" destination="Kup-Zq-LKR" id="DUf-dr-U42"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="MT9-Gt-Gz0"/>
                                     <barButtonItem title="Reset" id="4Ur-q1-lXm">
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="ResetAction:" destination="Kup-Zq-LKR" id="Wlc-fb-L70"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="spO-nn-Lp6" userLabel="restTimeToolbar">
-                                <rect key="frame" x="0.0" y="160" width="414" height="44"/>
+                            <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="spO-nn-Lp6" userLabel="restTimeToolbar">
+                                <frame key="frameInset" minY="160" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="Rest time" id="tRl-9k-rXT">
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="UBQ-iP-Cj3"/>
                                     <barButtonItem style="plain" id="Taw-kf-yuY">
@@ -407,27 +406,15 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Round 1/8" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xxk-dj-DKA">
-                                <rect key="frame" x="164" y="404" width="97" height="36"/>
+                                <frame key="frameInset" minX="139" minY="404" width="97" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="116" y="435" width="192" height="31"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <fontDescription key="fontDescription" type="system" pointSize="66"/>
-                                    <rect key="frame" x="46" y="486" width="324" height="65"/>
-                                </variation>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y7N-rh-8u0">
-                                <rect key="frame" x="118" y="353" width="188" height="138"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
-                                <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" type="system" pointSize="200"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="66"/>
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="00:00:00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IUx-fG-FYj">
-                                <rect key="frame" x="57" y="328" width="310" height="68"/>
+                                <frame key="frameInset" minX="32" minY="328" width="310" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="78" id="g40-mf-Tu6"/>
                                 </constraints>
@@ -438,9 +425,8 @@
                                         <exclude reference="g40-mf-Tu6"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
+                                <variation key="widthClass=compact">
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="85"/>
-                                    <rect key="frame" x="-26" y="356" width="466" height="64"/>
                                     <mask key="constraints">
                                         <include reference="g40-mf-Tu6"/>
                                     </mask>
@@ -452,8 +438,16 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="200"/>
                                 </variation>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y7N-rh-8u0">
+                                <frame key="frameInset" minX="93" minY="376" width="188" height="138"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="200"/>
+                                </variation>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="spO-nn-Lp6" firstAttribute="leading" secondItem="2yZ-x9-nKF" secondAttribute="leading" id="0Qc-eh-9MD"/>
                             <constraint firstAttribute="centerX" secondItem="IUx-fG-FYj" secondAttribute="centerX" id="71s-6n-vb6"/>
@@ -482,10 +476,10 @@
                     <navigationItem key="navigationItem" id="Glj-0j-B23">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="bU1-3m-wO4">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uWX-k9-7ri">
-                                <rect key="frame" x="20" y="7" width="92" height="30"/>
+                                <rect key="frame" x="16" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Settings">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="kV0-ej-Fh2" kind="show" id="9UT-2W-UD3"/>
@@ -513,12 +507,10 @@
             <objects>
                 <tabBarController id="NlI-mO-A98" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="ZyM-Pf-Eym">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="vsk-oo-ckN" kind="relationship" relationship="viewControllers" id="0CG-Lx-gUj"/>
