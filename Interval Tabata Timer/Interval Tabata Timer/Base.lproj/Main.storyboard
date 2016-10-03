@@ -175,30 +175,6 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qfw-Fr-2Aq" userLabel="Theme">
-                                <frame key="frameInset" minY="248" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <barButtonItem title="Theme" id="g4F-NN-skY">
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JMK-hF-PgX"/>
-                                    <barButtonItem style="plain" id="x1A-YL-rUu">
-                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="White" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="f3l-Jw-3sn">
-                                            <rect key="frame" x="297" y="7" width="97" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                            <connections>
-                                                <action selector="themeButton:" destination="kV0-ej-Fh2" eventType="touchDown" id="NuY-KU-5Dx"/>
-                                            </connections>
-                                        </textField>
-                                        <connections>
-                                            <action selector="ThemeButton:" destination="kV0-ej-Fh2" id="nKu-jS-x7N"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -224,7 +200,6 @@
                         <outlet property="delayTime" destination="wrh-Oe-GqG" id="fxG-hG-GEf"/>
                         <outlet property="soundEffectSwitch" destination="Oo6-zu-4wc" id="P4X-Gv-E9n"/>
                         <outlet property="soundOnOrOff" destination="cLy-hZ-AI4" id="51q-aq-yzC"/>
-                        <outlet property="themeText" destination="f3l-Jw-3sn" id="6Qf-ke-gyK"/>
                         <outlet property="vibratorOnOrOff" destination="tUf-SJ-b4a" id="TUu-0y-B6L"/>
                     </connections>
                 </viewController>
@@ -519,7 +494,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vsk-oo-ckN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Interval" id="vdb-vV-kWq"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WUZ-h4-GDQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="WUZ-h4-GDQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -538,7 +513,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pem-Cm-mEE" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Stopwatch" id="hYU-EQ-uU7"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ady-t4-MxE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ady-t4-MxE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -557,7 +532,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OGS-mL-fwq" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Timer" id="JoJ-N2-RBf"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xkP-mA-OXN">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xkP-mA-OXN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -572,6 +547,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9UT-2W-UD3"/>
+        <segue reference="nd6-Dp-anp"/>
     </inferredMetricsTieBreakers>
 </document>
