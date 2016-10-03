@@ -15,7 +15,7 @@ class TimerViewController: UIViewController {
     
     let timerPicker  : TimerPicker = TimerPicker()
     @IBOutlet weak var timerText: UITextField!
-    var timerValues = [0,0,0]
+    var timerValues = [0,0,20]
     let doneToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
     var timer = Timer()
     @IBOutlet weak var startAndPauseButton: UIBarButtonItem!
@@ -24,11 +24,10 @@ class TimerViewController: UIViewController {
         let filePath = Bundle.main.path(forResource: "alarmSound", ofType: "mp3")
         
         let fileURL = URL(fileURLWithPath: filePath!)
-        var error : NSError?
+
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: fileURL)
         } catch let error1 as NSError {
-            error = error1
             audioPlayer = nil
         }
 
@@ -70,12 +69,16 @@ class TimerViewController: UIViewController {
         }
         timerText.text = strArray[0] + ":" + strArray[1] + ":" + strArray[2]
     }
-    @IBAction func ResetAction(_ sender: AnyObject) {
+    func resetTimer() {
         timerValues = timerPicker.getTimerValues()
         startAndPauseButton.title = "Start"
         timer.invalidate()
         setTimerTextValues()
         UIApplication.shared.isIdleTimerDisabled = false
+    }
+    
+    @IBAction func ResetAction(_ sender: AnyObject) {
+        resetTimer();
     }
  
     @IBAction func StartAndPauseAction(_ sender: UIBarButtonItem) {
@@ -104,6 +107,7 @@ class TimerViewController: UIViewController {
         alert.message = message
         alert.addButton(withTitle: "ok")
         alert.show()
+
         
     }
     
@@ -122,7 +126,8 @@ class TimerViewController: UIViewController {
             showAlert()
             timerValues[0] = 0; timerValues[1] = 0; timerValues[2] = 0
             
-            timer.invalidate()
+            timer.invalidate();
+            resetTimer();
             return
         }
         setTimerTextValues()
